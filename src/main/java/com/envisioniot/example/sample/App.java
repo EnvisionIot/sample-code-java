@@ -1,7 +1,11 @@
 package com.envisioniot.example.sample;
 
-import com.envisioniot.example.sample.functions.connection.gatewayandsubdevice.ConnectionGatewayAndSubdeviceApp;
-import com.envisioniot.example.sample.functions.streamprocessing.StreamProcessingApp;
+import com.envisioniot.example.sample.edp.streamprocessing.StreamProcessingApp;
+import com.envisioniot.example.sample.iothub.connection.device.ConnectionDeviceApp;
+import com.envisioniot.example.sample.iothub.connection.devicedata.ConnectionDeviceDataApp;
+import com.envisioniot.example.sample.iothub.connection.gatewayandsubdevice.ConnectionGatewayAndSubdeviceApp;
+import com.envisioniot.example.sample.iothub.connection.product.ConnectionProductApp;
+import com.envisioniot.example.sample.iothub.model.ModelApp;
 
 import java.io.IOException;
 
@@ -29,21 +33,23 @@ public class App {
 
         // Functions
 
-        // Run GetThings functions
-        /*ModelApp model = new ModelApp();
+/*        // Run GetThings iothub
+        ModelApp model = new ModelApp();
         model.modelappGeneral(accessKey, secretKey, orgId, url);*/
 
         // Connection Service, Product
 
-        //ConnectionProductApp product = new ConnectionProductApp();
-        //product.connectionProductAppGeneral(accessKey, secretKey, orgId, url);
+/*        ConnectionProductApp product = new ConnectionProductApp();
+        product.connectionProductAppGeneral(accessKey, secretKey, orgId, url);*/
 
 
         // Connection Service, Device
-        /*
+
+/*
         ConnectionDeviceApp device = new ConnectionDeviceApp();
         device.connectionDeviceAppGeneral(accessKey, secretKey, orgId, url);
-         */
+*/
+
 
         // Connection Service, Certificate
         /*
@@ -51,17 +57,17 @@ public class App {
         certificate.connectionCertificateAppGeneral(accessKey, secretKey, orgId, url);
         */
 
-        // Connection Services, Gateway and Sub-Device
-        /*
+/*        // Connection Services, Gateway and Sub-Device
+
         ConnectionGatewayAndSubdeviceApp gatewayandsubdevice = new ConnectionGatewayAndSubdeviceApp();
-        gatewayandsubdevice.connectionGatewayAndSubdeviceAppGeneral(accessKey, secretKey, orgId, url);
-        */
+        gatewayandsubdevice.connectionGatewayAndSubdeviceAppGeneral(accessKey, secretKey, orgId, url);*/
+
 
         // Connection Services, Device Data
-        /*
+/*
         ConnectionDeviceDataApp devicedata = new ConnectionDeviceDataApp();
-        devicedata.connectionDeviceDataAppGeneral(accessKey, secretKey, orgId, url);
-         */
+        devicedata.connectionDeviceDataAppGeneral(accessKey, secretKey, orgId, url);*/
+
 
         //Connection Services, HTTP Message Integration
         /*
@@ -91,9 +97,9 @@ public class App {
         //AlertApp alert =  new AlertApp();
        // alert.alertAppGeneral(accessKey, secretKey, orgId, url);
 
-        //Stream Processing Services, Get Stage State
+/*        //Stream Processing Services, Get Stage State
         StreamProcessingApp streamprocessingapp = new StreamProcessingApp();
-        streamprocessingapp.streamProcessingAppGeneral(accessKey, secretKey, orgId, url);
+        streamprocessingapp.streamProcessingAppGeneral(accessKey, secretKey, orgId, url);*/
 
     }
 
