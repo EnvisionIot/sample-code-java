@@ -1,0 +1,236 @@
+{
+  "thingModelId": "epb_battery_socket",
+  "ou": "o16170127203621585",
+  "thingModelName": {
+    "defaultValue": "EPB_Battery_Socket",
+    "i18nValue": {}
+  },
+  "thingModelDesc": "",
+  "thingModelCatagory": "Exchangeable_Power_Battery",
+  "thingAttributeMap": {
+    "version": {
+      "maxLength": 10,
+      "defaultValue": "v1.0",
+      "required": true,
+      "accessMode": true,
+      "identifier": "version",
+      "name": {
+        "defaultValue": "Version",
+        "i18nValue": {}
+      },
+      "desc": "",
+      "i18nDesc": {
+        "defaultValue": "",
+        "i18nValue": {}
+      },
+      "tags": {
+        "tagMap": {}
+      },
+      "createTime": "1635761017632",
+      "priority": 1,
+      "$class": "com.envisioniot.enos.model_service.share.data.tsl.attribute.TSLTextAttribute"
+    },
+    "station_sn": {
+      "maxLength": 32,
+      "required": false,
+      "accessMode": true,
+      "identifier": "station_sn",
+      "name": {
+        "defaultValue": "Station_SN",
+        "i18nValue": {}
+      },
+      "desc": "",
+      "i18nDesc": {
+        "defaultValue": "",
+        "i18nValue": {}
+      },
+      "tags": {
+        "tagMap": {}
+      },
+      "createTime": "1635764018280",
+      "priority": 2,
+      "$class": "com.envisioniot.enos.model_service.share.data.tsl.attribute.TSLTextAttribute"
+    },
+    "number": {
+      "minimum": -2147483648,
+      "maximum": 2147483647,
+      "exclusiveMinimum": false,
+      "exclusiveMaximum": false,
+      "hasQuality": false,
+      "required": false,
+      "accessMode": true,
+      "identifier": "number",
+      "name": {
+        "defaultValue": "Number",
+        "i18nValue": {}
+      },
+      "desc": "",
+      "i18nDesc": {
+        "defaultValue": "",
+        "i18nValue": {}
+      },
+      "tags": {
+        "tagMap": {}
+      },
+      "createTime": "1635764127380",
+      "priority": 3,
+      "$class": "com.envisioniot.enos.model_service.share.data.tsl.attribute.TSLIntAttribute"
+    }
+  },
+  "thingMeasurepointMap": {
+    "status": {
+      "minimum": -2147483648,
+      "maximum": 2147483647,
+      "exclusiveMinimum": false,
+      "exclusiveMaximum": false,
+      "signalType": "DI",
+      "hasQuality": false,
+      "required": false,
+      "accessMode": true,
+      "identifier": "status",
+      "name": {
+        "defaultValue": "Status",
+        "i18nValue": {}
+      },
+      "desc": "0: socket not available;\n1: battery not available;\n10: socket available & no battery\n11: battery moving in\n12: battery locked\n13: battery changing\n14: stop changing\n15: battery unlocked\n16: battery moving out",
+      "i18nDesc": {
+        "defaultValue": "0: socket not available;\n1: battery not available;\n10: socket available & no battery\n11: battery moving in\n12: battery locked\n13: battery changing\n14: stop changing\n15: battery unlocked\n16: battery moving out",
+        "i18nValue": {}
+      },
+      "tags": {
+        "tagMap": {}
+      },
+      "createTime": "1635764700090",
+      "priority": 1,
+      "$class": "com.envisioniot.enos.model_service.share.data.tsl.measurepoint.TSLIntMeasurepoint"
+    },
+    "battery_sn": {
+      "maxLength": 32,
+      "required": false,
+      "accessMode": true,
+      "identifier": "battery_sn",
+      "name": {
+        "defaultValue": "Battery_SN",
+        "i18nValue": {}
+      },
+      "desc": "",
+      "i18nDesc": {
+        "defaultValue": "",
+        "i18nValue": {}
+      },
+      "tags": {
+        "tagMap": {}
+      },
+      "createTime": "1635764733538",
+      "priority": 2,
+      "$class": "com.envisioniot.enos.model_service.share.data.tsl.measurepoint.TSLTextMeasurepoint"
+    },
+    "battery_current_wh": {
+      "minimum": -1.7976931348623157E308,
+      "maximum": 1.7976931348623157E308,
+      "exclusiveMinimum": false,
+      "exclusiveMaximum": false,
+      "unit": {
+        "unitId": "Wh",
+        "multiplier": "ONE"
+      },
+      "signalType": "AI",
+      "hasQuality": false,
+      "required": false,
+      "accessMode": true,
+      "identifier": "battery_current_wh",
+      "name": {
+        "defaultValue": "Battery_Current_WH",
+        "i18nValue": {}
+      },
+      "desc": "",
+      "i18nDesc": {
+        "defaultValue": "",
+        "i18nValue": {}
+      },
+      "tags": {
+        "tagMap": {}
+      },
+      "createTime": "1637646915398",
+      "priority": 13,
+      "$class": "com.envisioniot.enos.model_service.share.data.tsl.measurepoint.TSLDoubleMeasurepoint"
+    },
+    "battery_current_quantity_percent": {
+      "minimum": -1.7976931348623157E308,
+      "maximum": 1.7976931348623157E308,
+      "exclusiveMinimum": false,
+      "exclusiveMaximum": false,
+      "unit": {
+        "unitId": "%",
+        "multiplier": "ONE"
+      },
+      "signalType": "AI",
+      "hasQuality": false,
+      "required": false,
+      "accessMode": true,
+      "identifier": "battery_current_quantity_percent",
+      "name": {
+        "defaultValue": "Battery_Current_Quantity_Percent",
+        "i18nValue": {}
+      },
+      "desc": "",
+      "i18nDesc": {
+        "defaultValue": "",
+        "i18nValue": {}
+      },
+      "tags": {
+        "tagMap": {}
+      },
+      "createTime": "1637646982394",
+      "priority": 14,
+      "$class": "com.envisioniot.enos.model_service.share.data.tsl.measurepoint.TSLDoubleMeasurepoint"
+    },
+    "c_total_charged_wh": {
+      "minimum": -1.7976931348623157E308,
+      "maximum": 1.7976931348623157E308,
+      "exclusiveMinimum": false,
+      "exclusiveMaximum": false,
+      "signalType": "AI",
+      "hasQuality": false,
+      "required": false,
+      "accessMode": true,
+      "identifier": "c_total_charged_wh",
+      "name": {
+        "defaultValue": "C_Total_Charged_WH",
+        "i18nValue": {}
+      },
+      "desc": "",
+      "i18nDesc": {
+        "defaultValue": "",
+        "i18nValue": {}
+      },
+      "tags": {
+        "tagMap": {}
+      },
+      "createTime": "1638425466962",
+      "priority": 15,
+      "$class": "com.envisioniot.enos.model_service.share.data.tsl.measurepoint.TSLDoubleMeasurepoint"
+    }
+  },
+  "thingServiceMap": {},
+  "thingEventMap": {},
+  "tag": {
+    "tagMap": {}
+  },
+  "allowAdditionalAttribute": false,
+  "allowAdditionalMeasurepoint": false,
+  "inheritedAttributeIds": [
+    "version"
+  ],
+  "inheritedMeasurepointIds": [],
+  "inheritedServiceIds": [],
+  "inheritedEventIds": [],
+  "parentModelId": "epb_base_model",
+  "extraInfo": {
+    "createBy": "xinbo.chen",
+    "createTime": "1635763964901",
+    "updateBy": "xinbo.chen",
+    "updateTime": "1638425471949",
+    "ns": "o16170127203621585"
+  }
+}
