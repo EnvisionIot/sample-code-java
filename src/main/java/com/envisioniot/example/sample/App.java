@@ -142,8 +142,8 @@ public class App {
 //        tsdbdataapp.tsdbDataAppGeneral(accessKey, secretKey, orgId, url);
 
 
-        AppPortalApp appPortalApp = new AppPortalApp();
-        appPortalApp.appPortalGeneral(accessKey, secretKey, orgId, url);
+/*        AppPortalApp appPortalApp = new AppPortalApp();
+        appPortalApp.appPortalGeneral(accessKey, secretKey, orgId, url);*/
 
     }
 
