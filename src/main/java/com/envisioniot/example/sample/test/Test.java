@@ -22,7 +22,15 @@ import com.alibaba.fastjson.JSONObject;
 import com.envision.apim.poseidon.config.PConfig;
 import com.envision.apim.poseidon.core.Poseidon;
 import com.envision.apim.poseidon.request.PoseidonRequest;
+import com.envisioniot.example.sample.iothub.alert.record.old.CreateActiveAlert;
+import com.envisioniot.example.sample.iothub.alert.record.old.CreateActiveAlertBatch;
+import com.envisioniot.example.sample.iothub.alert.record.old.SearchActiveAlert;
+import com.envisioniot.example.sample.iothub.alert.record.old.history.SearchHistoryAlert;
+import com.envisioniot.example.sample.iothub.alert.rule.SearchAlertRule;
+import com.envisioniot.example.sample.utility.PropertyUtil;
 import org.junit.Before;
+
+import java.io.IOException;
 
 /**
  * @author darwen
@@ -32,6 +40,7 @@ public class Test {
 
     private static final String API_Gateway_URL = "https://apim-ppe1.envisioniot.com";
     private Poseidon poseidon;
+
 
     private static class Request extends PoseidonRequest {
 
@@ -65,7 +74,7 @@ public class Test {
         ).method("POST");
     }
 
-    @org.junit.Test
+    //@org.junit.Test
     public void GetStageState() {
         Request request = new Request();
         request.setBodyParams("assetIds", "ChahG3d9");
@@ -80,6 +89,44 @@ public class Test {
                 .getResponse(request, JSONObject.class);
         System.out.println(response);
     }
+    @org.junit.Test
+    public void TestData(){
+        PropertyUtil pptfile = null;
+        try {
+            pptfile = new PropertyUtil("env.properties");
+        } catch (
+                IOException e) {
+            e.printStackTrace();
+        }
+        String accessKey = pptfile.getProperty("accessKey");
+        String secretKey = pptfile.getProperty("secretKey");
+        String orgId = pptfile.getProperty("orgId");
+        String url = pptfile.getProperty("url");
 
+
+        CreateActiveAlertBatch activeAlertBatch = new CreateActiveAlertBatch();
+        activeAlertBatch.createActiveAlertBatch(accessKey, secretKey, orgId, url);
+    }
+
+//    @org.junit.Test
+    public void SearchData(){
+        PropertyUtil pptfile = null;
+        try {
+            pptfile = new PropertyUtil("env.properties");
+        } catch (
+                IOException e) {
+            e.printStackTrace();
+        }
+        String accessKey = pptfile.getProperty("accessKey");
+        String secretKey = pptfile.getProperty("secretKey");
+        String orgId = pptfile.getProperty("orgId");
+        String url = pptfile.getProperty("url");
+
+
+        SearchActiveAlert searchActiveAlert = new SearchActiveAlert();
+        // eventId is from DevPortal - Alert - Alert - Active Alert  - Event ID column
+        searchActiveAlert.searchActiveAlert(accessKey, secretKey, orgId, url, "eventId = '2022021772ed00a2fa22be097ca2dff11fa19091'");
+        searchActiveAlert.searchActiveAlert(accessKey, secretKey, orgId, url, "eventId = '2022021704cb00ca6a7276668111e43384ba777d'");
+    }
 
 }

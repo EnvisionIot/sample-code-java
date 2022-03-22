@@ -103,7 +103,16 @@
           <artifactId>logback-classic</artifactId>
           <version>1.2.3</version>
       </dependency>
-
+    <dependency>
+      <groupId>com.envisioniot</groupId>
+      <artifactId>apim-poseidon</artifactId>
+      <version>0.1.14</version>
+    </dependency>
+    <dependency>
+      <groupId>com.envisioniot</groupId>
+      <artifactId>enos-app-portal-sdk</artifactId>
+      <version>0.0.15-SNAPSHOT</version>
+    </dependency>
 
   </dependencies>
 
