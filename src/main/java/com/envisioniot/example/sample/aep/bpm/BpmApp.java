@@ -8,6 +8,7 @@ import com.envisioniot.example.sample.aep.bpm.process.*;
 import com.envisioniot.example.sample.aep.bpm.task.*;
 import org.apache.commons.collections4.Get;
 
+import java.io.File;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.HashMap;
@@ -15,6 +16,30 @@ import java.util.Map;
 
 public class BpmApp {
     public void bpmAppGeneral(String accessKey, String secretKey, String orgId, String url) {
+
+        // JSON structure testing. Ignore in sample code.
+
+        // Type 1: https://www.envisioniot.com/docs/api/en/2.3.0/overview.html#pagination-request-struct
+        JSONObject type1SortersJSON = new JSONObject();
+        type1SortersJSON.put("field", "started");
+        type1SortersJSON.put("order", "ASC");
+        JSONArray type1SortersArray = new JSONArray();
+        type1SortersArray.add(type1SortersJSON);
+        JSONObject type1JSON = new JSONObject();
+        type1JSON.put("pageNo", 0);
+        type1JSON.put("pageSize", 3);
+        type1JSON.put("sorters", type1SortersArray);
+
+        // Type 2: https://www.envisioniot.com/docs/bpm-api/en/2.3.0/process/query_process_instance.html#pagination-struct
+        JSONObject type2SortersJSON = new JSONObject();
+        type2SortersJSON.put("field", "started");
+        type2SortersJSON.put("order", "asc");
+        JSONArray type2SortersArray = new JSONArray();
+        type2SortersArray.add(type2SortersJSON);
+        JSONObject type2JSON = new JSONObject();
+        type2JSON.put("current", 0);
+        type2JSON.put("pageSize", 3);
+        type2JSON.put("sorts", type2SortersArray);
 
         /*
          *   1. Login Session
@@ -30,36 +55,22 @@ public class BpmApp {
         //  note: The access token, which is represented by the bearer token is required.
 /*        GetProcessInstance getprocessinstance = new GetProcessInstance();
         getprocessinstance.getProcessInstance
-                (accessKey, secretKey, url, accessToken, "601ed598-a8d0-11ec-ad0f-8e1ac2659f4c");*/
+                (accessKey, secretKey, url, accessToken, "eeedc03a-a9a1-11ec-ad0f-8e1ac2659f4c");*/
 
         //  Get Process View Columns: get the information of process view columns.
 /*        GetProcessViewColumns getprocessviewcolumns = new GetProcessViewColumns();
         getprocessviewcolumns.getProcessViewColumns
-                (accessKey, secretKey, url, accessToken, "GETPROCESSVIEWCOLUMNS_KEYS");*/
+                (accessKey, secretKey, url, accessToken, "API230JAVAPWF_KEY");*/
 
         //  Query Process Instance: query the list of process instances.
 /*        QueryProcessInstance queryprocessinstance = new QueryProcessInstance();
 
-        // Query Process Instance: Pagination Struct
-        JSONObject queryProcessSortersJSON = new JSONObject();
-        queryProcessSortersJSON.put("field", "started");
-        queryProcessSortersJSON.put("order", "DESC");
-        JSONArray queryProcessSortersArray = new JSONArray();
-        queryProcessSortersArray.add(queryProcessSortersJSON);
-        JSONObject queryProcessPaginationJSON = new JSONObject();
-        queryProcessPaginationJSON.put("current", 0);
-        queryProcessPaginationJSON.put("pageSize", 1);
-        queryProcessPaginationJSON.put("sorts", queryProcessSortersArray);
-
-        System.out.println("\n\n" + queryProcessPaginationJSON + "\n\n");
-
         long startedBefore = 0L;
         long startedAfter = 0L;
-
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         try {
-             startedBefore = df.parse("2022-03-16 22:43:55").getTime();
-             startedAfter = df.parse("2022-03-16 18:02:37").getTime();
+             startedBefore = df.parse("2022-03-22 14:30:50").getTime();
+             startedAfter = df.parse("2022-03-22 13:35:50").getTime();
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -69,44 +80,59 @@ public class BpmApp {
         // Query Process Instance: setting processStatus (InProgress, completed, terminated)
         queryProcessInstanceParams.put("processStatus", "inProgress");
         // Query Process Instance: setting optional parameters
-        //queryProcessInstanceParams.put("processName", "GetProcessInstanceTest");
-        queryProcessInstanceParams.put("processInstanceId", "f381c8fe-a911-11ec-ad0f-8e1ac2659f4c");
+        queryProcessInstanceParams.put("processName", "API230JAVA_ProcessWithForm");
+        //queryProcessInstanceParams.put("processInstanceId", "f381c8fe-a911-11ec-ad0f-8e1ac2659f4c");
         //queryProcessInstanceParams.put("startedBefore", startedBefore);
         //queryProcessInstanceParams.put("startedAfter", startedAfter);
         //queryProcessInstanceParams.put("startBy", "u16473063753681521");
-        //queryProcessInstanceParams.put("pagination", queryProcessPaginationJSON);
 
+        //  No pagination
         queryprocessinstance.queryProcessInstance
-                (accessKey, secretKey, url, accessToken, queryProcessInstanceParams);*/
+                (accessKey, secretKey, url, accessToken, queryProcessInstanceParams);
+        //  pagination type 1
+        queryprocessinstance.queryProcessInstanceWithPagination
+                (accessKey, secretKey, url, accessToken, queryProcessInstanceParams, 0, 4, "started", "ASC");
+        queryprocessinstance.queryProcessInstanceWithPagination
+                (accessKey, secretKey, url, accessToken, queryProcessInstanceParams, 0, 4, "started", "DESC");
+        //  pagination type 2
+        queryprocessinstance.queryProcessInstanceWithPagination
+                (accessKey, secretKey, url, accessToken, queryProcessInstanceParams, 0, 4, "started", "ASC", "0");
+        queryprocessinstance.queryProcessInstanceWithPagination
+                (accessKey, secretKey, url, accessToken, queryProcessInstanceParams, 0, 4, "started", "DESC", "0");*/
 
-       // Query Process Instance By View
+
+        //  Query Process Instance By View
 /*        QueryProcessInstanceByView queryprocessinstancebyview = new QueryProcessInstanceByView();
 
-        JSONObject DisplayViewColumnQueryJSON = new JSONObject();
+        //  Query Process Instance By View: Filter result by selected column value.
+        //  issues: unsure how to filter numerical data
         JSONObject DisplayViewColumnQueryRepresentation = new JSONObject();
-        DisplayViewColumnQueryRepresentation.put("id", "adc726ff8a5ba11ec8df5120e04f331d8_");
-        DisplayViewColumnQueryRepresentation.put("filter", "started=1647522552705");
+            DisplayViewColumnQueryRepresentation.put("id", "adf38f2f1a9a211ecad0f8e1ac2659f4c");
+        DisplayViewColumnQueryRepresentation.put("filter", "inProgress");
         JSONArray DisplayViewColumnQueryRepresentationArray = new JSONArray();
         DisplayViewColumnQueryRepresentationArray.add(DisplayViewColumnQueryRepresentation);
 
-        // Query Process Instance By View: Pagination Struct
-        JSONObject queryProcessViewSortersJSON = new JSONObject();
-        queryProcessViewSortersJSON.put("field", "started");
-        queryProcessViewSortersJSON.put("order", "DESC");
-        JSONArray queryProcessViewSortersArray = new JSONArray();
-        queryProcessViewSortersArray.add(queryProcessViewSortersJSON);
-        JSONObject queryProcessViewPaginationJSON = new JSONObject();
-        queryProcessViewPaginationJSON.put("current", 0);
-        queryProcessViewPaginationJSON.put("pageSize", 4);
-        queryProcessViewPaginationJSON.put("sorts", queryProcessViewSortersArray);
-
         // Query Process Instance By View: setting parameters
         Map<String, Object> queryProcessByViewInstanceParams = new HashMap<>();
-        queryProcessByViewInstanceParams.put("pagination", queryProcessViewPaginationJSON);
         queryProcessByViewInstanceParams.put("columns", DisplayViewColumnQueryRepresentationArray);
 
+        //  No pagination.
         queryprocessinstancebyview.queryProcessInstanceByView
-                (accessKey, secretKey, url, accessToken, "GETPROCESSVIEWCOLUMNS_KEY", queryProcessByViewInstanceParams);*/
+                (accessKey, secretKey, url, accessToken, "API230JAVAPWF_KEY", queryProcessByViewInstanceParams);
+        //  pagination type 1
+        queryprocessinstancebyview.queryProcessInstanceByViewWithPagination
+                (accessKey, secretKey, url, accessToken, "API230JAVAPWF_KEY", queryProcessByViewInstanceParams,
+                0, 4, "started", "ASC");
+        queryprocessinstancebyview.queryProcessInstanceByViewWithPagination
+                (accessKey, secretKey, url, accessToken, "API230JAVAPWF_KEY", queryProcessByViewInstanceParams,
+                0, 4, "started", "DESC");
+        //  pagination type 2
+        queryprocessinstancebyview.queryProcessInstanceByViewWithPagination
+                (accessKey, secretKey, url, accessToken, "API230JAVAPWF_KEY", queryProcessByViewInstanceParams,
+                0, 4, "started", "ASC", "0");
+        queryprocessinstancebyview.queryProcessInstanceByViewWithPagination
+                (accessKey, secretKey, url, accessToken, "API230JAVAPWF_KEY", queryProcessByViewInstanceParams,
+                0, 4, "started", "DESC", "0");*/
 
         // Start Process Instance
 /*        StartProcessInstance startprocessinstance = new StartProcessInstance();
@@ -114,13 +140,26 @@ public class BpmApp {
         Map<String, Object> valuesMap = new HashMap<>();
 
         // Start Process Instance: Mandatory Parameters
-        startProcessInstanceParams.put("processDefinitionId", "4defefac-a915-11ec-8df5-120e04f331d8");
-        valuesMap.put("TextBoxVariableName", "yourValueHere");
+        startProcessInstanceParams.put("processDefinitionId", "e6322ef1-a9a1-11ec-8df5-120e04f331d8");
+        File f = new File("UploadFileSample.txt");
+        valuesMap.put("SingleLineTextBoxVariableName", "yourValueHere");
+        valuesMap.put("MultilineTextBox", "yourValueHere");
+        valuesMap.put("FileUploadVariableName", f);
+        valuesMap.put("SwitchVariableName", true);
+        valuesMap.put("StaticDropdownVariableName", "DefaultKey2");
+        valuesMap.put("TimePickerVariableName", "13:31:02");
+        valuesMap.put("DateTimePickerVariableName", "2022-03-22 13:32:03");
+        valuesMap.put("TimeRangePickerVariableName", "2022-03-22 13:31:22~2022-03-23 13:31:22");
+        valuesMap.put("ProductDropdownVariableName", "java_sim_product1");
+        valuesMap.put("FirmwareDropdownVariableName", "java_sim_FW");
+        valuesMap.put("FirmwareVersionDropdownVariableName", "1.1");
+        valuesMap.put("DeviceDropdownVariableName", "java_sim_dev1");
+
         startProcessInstanceParams.put("values", valuesMap);
         // Start Process Instance: Optional Parameters
-        startProcessInstanceParams.put("name", "StartProcessInstance");
+        startProcessInstanceParams.put("name", "API230JAVA_ProcessWithForm");
         //startProcessInstanceParams.put("formId", "formkey");
-        startProcessInstanceParams.put("outcome", "yourFormOutcomeString");
+        startProcessInstanceParams.put("outcome", "YourFormActionKey");
 
         startprocessinstance.startProcessInstance(accessKey, secretKey, url, accessToken, startProcessInstanceParams);*/
 
@@ -134,62 +173,89 @@ public class BpmApp {
 
         // Get Task
 /*        GetTask gettask = new GetTask();
-        gettask.getTask(accessKey, secretKey, url, accessToken, "d5953135-a8c9-11ec-ad0f-8e1ac2659f4c");*/
+        gettask.getTask(accessKey, secretKey, url, accessToken, "4c40da46-a9eb-11ec-ad0f-8e1ac2659f4c");*/
 
         // Query Task
-        QueryTask querytask = new QueryTask();
+/*       QueryTask querytask = new QueryTask();
 
         // Query Task: Setting parameters
         HashMap<String, Object> queryTaskParametersMap = new HashMap<>();
         // Query Task: Setting parameters - mandatory parameters
-        queryTaskParametersMap.put("taskStatus", "inProgress");
+        queryTaskParametersMap.put("taskStatus", "unclaimed");
         // Query Task: Setting parameters - optional parameters
-        queryTaskParametersMap.put("processInstanceId", "a48d9ec1-a982-11ec-8df5-120e04f331d8");
-        //queryTaskParametersMap.put("processName", "ToClaimProcessInstance");
-        //queryTaskParametersMap.put("taskName", "User Task");
-        //  Query Task: Setting parameters - optional parameters, Pagination
-        JSONObject queryTaskPaginationJSON = new JSONObject();
-        JSONObject queryTaskSortersJSON = new JSONObject();
-        queryTaskSortersJSON.put("field", "completedTime");
-        queryTaskSortersJSON.put("order", "DESC");
-        JSONArray queryTaskSortersArray = new JSONArray();
-        queryTaskSortersArray.add(queryTaskSortersJSON);
-        queryTaskPaginationJSON.put("current", 0);
-        queryTaskPaginationJSON.put("pageSize", 1);
-        queryTaskPaginationJSON.put("sorts", queryTaskSortersArray);
-        //queryTaskParametersMap.put("pagination", queryTaskPaginationJSON);
+        //queryTaskParametersMap.put("processInstanceId", "4c3fefde-a9eb-11ec-ad0f-8e1ac2659f4c");
+        queryTaskParametersMap.put("processName", "API230JAVA_ProcessWithForm");
+        queryTaskParametersMap.put("taskName", "YourTaskName");
 
-        //querytask.queryTask(accessKey, secretKey, url, accessToken, queryTaskParametersMap);
+        // No pagination.
+        querytask.queryTask(accessKey, secretKey, url, accessToken, queryTaskParametersMap);
+        // Pagination type 1
+        querytask.queryTaskWithPagination
+                (accessKey, secretKey, url, accessToken, queryTaskParametersMap, 0, 4, "createdTime", "ASC");
+        querytask.queryTaskWithPagination
+                (accessKey, secretKey, url, accessToken, queryTaskParametersMap, 0, 4, "createdTime", "DESC");
+        // Pagination type 2
+        querytask.queryTaskWithPagination
+                (accessKey, secretKey, url, accessToken, queryTaskParametersMap, 0, 4, "createdTime", "ASC", "0");
+        querytask.queryTaskWithPagination
+                (accessKey, secretKey, url, accessToken, queryTaskParametersMap, 0, 4, "createdTime", "DESC", "0");*/
 
         // claim task
 /*        ClaimTask claimTask = new ClaimTask();
         claimTask.claimTask(accessKey, secretKey, url, accessToken, "09623035-a8fb-11ec-ad0f-8e1ac2659f4c");*/
 
         // Complete Task
-        CompleteTask completetask = new CompleteTask();
+/*        CompleteTask completetask = new CompleteTask();
         HashMap<String, Object> completeTaskParams = new HashMap<>();
         HashMap<String, Object> values = new HashMap<>();
-        values.put("TextBoxVariableName", "formDataHere");
+
+        File f = new File("UploadFileSample.txt");
+        values.put("SingleLineTextBoxVariableName", "yourValueHere");
+        values.put("MultilineTextBox", "yourValueHere");
+        values.put("FileUploadVariableName", f);
+        values.put("SwitchVariableName", true);
+        values.put("StaticDropdownVariableName", "DefaultKey2");
+        values.put("TimePickerVariableName", "13:31:02");
+        values.put("DateTimePickerVariableName", "2022-03-22 13:32:03");
+        values.put("TimeRangePickerVariableName", "2022-03-22 13:31:22~2022-03-23 13:31:22");
+        values.put("ProductDropdownVariableName", "java_sim_product1");
+        values.put("FirmwareDropdownVariableName", "java_sim_FW");
+        values.put("FirmwareVersionDropdownVariableName", "1.1");
+        values.put("DeviceDropdownVariableName", "java_sim_dev1");
+
         //completeTaskParams.put("formId", "formkey");
         completeTaskParams.put("values", values);
-        completeTaskParams.put("outcome", "actionkey");
+        completeTaskParams.put("outcome", "YourFormActionKey");
 
         completetask.completeTask
-                (accessKey, secretKey, url, accessToken, "a48e13f9-a982-11ec-8df5-120e04f331d8", completeTaskParams);
+                (accessKey, secretKey, url, accessToken, "4c40da46-a9eb-11ec-ad0f-8e1ac2659f4c", completeTaskParams);*/
 
         // Claim And Complete Task
-/*        ClaimAndCompleteTask claimandcompletetask = new ClaimAndCompleteTask();
+       ClaimAndCompleteTask claimandcompletetask = new ClaimAndCompleteTask();
 
         HashMap<String, Object> claimAndCompleteTaskParams = new HashMap<>();
         HashMap<String, Object> claimAndCompleteValues = new HashMap<>();
-        claimAndCompleteValues.put("formkey", "formDataHere");
+
+        File f = new File("UploadFileSample.txt");
+        claimAndCompleteValues.put("SingleLineTextBoxVariableName", "yourValueHere");
+        claimAndCompleteValues.put("MultilineTextBox", "yourValueHere");
+        claimAndCompleteValues.put("FileUploadVariableName", f);
+        claimAndCompleteValues.put("SwitchVariableName", true);
+        claimAndCompleteValues.put("StaticDropdownVariableName", "DefaultKey2");
+        claimAndCompleteValues.put("TimePickerVariableName", "13:31:02");
+        claimAndCompleteValues.put("DateTimePickerVariableName", "2022-03-22 13:32:03");
+        claimAndCompleteValues.put("TimeRangePickerVariableName", "2022-03-22 13:31:22~2022-03-23 13:31:22");
+        claimAndCompleteValues.put("ProductDropdownVariableName", "java_sim_product1");
+        claimAndCompleteValues.put("FirmwareDropdownVariableName", "java_sim_FW");
+        claimAndCompleteValues.put("FirmwareVersionDropdownVariableName", "1.1");
+        claimAndCompleteValues.put("DeviceDropdownVariableName", "java_sim_dev1");
+
         //completeTaskParams.put("formId", "formkey");
         claimAndCompleteTaskParams.put("values", claimAndCompleteValues);
-        claimAndCompleteTaskParams.put("outcome", "outcomeString");
-
+        claimAndCompleteTaskParams.put("outcome", "YourFormActionKey");
 
         claimandcompletetask.claimAndCompleteTask
-                (accessKey, secretKey, url, accessToken, "cc78d848-a91d-11ec-8df5-120e04f331d8", claimAndCompleteTaskParams);*/
+                (accessKey, secretKey, url, accessToken, "484a641c-a9f1-11ec-ad0f-8e1ac2659f4c", claimAndCompleteTaskParams);
 
 
     }
