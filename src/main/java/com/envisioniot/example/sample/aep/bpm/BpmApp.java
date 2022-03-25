@@ -17,30 +17,6 @@ import java.util.Map;
 public class BpmApp {
     public void bpmAppGeneral(String accessKey, String secretKey, String orgId, String url) {
 
-        // JSON structure testing. Ignore in sample code.
-
-        // Type 1: https://www.envisioniot.com/docs/api/en/2.3.0/overview.html#pagination-request-struct
-        JSONObject type1SortersJSON = new JSONObject();
-        type1SortersJSON.put("field", "started");
-        type1SortersJSON.put("order", "ASC");
-        JSONArray type1SortersArray = new JSONArray();
-        type1SortersArray.add(type1SortersJSON);
-        JSONObject type1JSON = new JSONObject();
-        type1JSON.put("pageNo", 0);
-        type1JSON.put("pageSize", 3);
-        type1JSON.put("sorters", type1SortersArray);
-
-        // Type 2: https://www.envisioniot.com/docs/bpm-api/en/2.3.0/process/query_process_instance.html#pagination-struct
-        JSONObject type2SortersJSON = new JSONObject();
-        type2SortersJSON.put("field", "started");
-        type2SortersJSON.put("order", "asc");
-        JSONArray type2SortersArray = new JSONArray();
-        type2SortersArray.add(type2SortersJSON);
-        JSONObject type2JSON = new JSONObject();
-        type2JSON.put("current", 0);
-        type2JSON.put("pageSize", 3);
-        type2JSON.put("sorts", type2SortersArray);
-
         /*
          *   1. Login Session
          *   you need to follow this flow to make your own session control
@@ -231,6 +207,7 @@ public class BpmApp {
                 (accessKey, secretKey, url, accessToken, "4c40da46-a9eb-11ec-ad0f-8e1ac2659f4c", completeTaskParams);*/
 
         // Claim And Complete Task
+/*
        ClaimAndCompleteTask claimandcompletetask = new ClaimAndCompleteTask();
 
         HashMap<String, Object> claimAndCompleteTaskParams = new HashMap<>();
@@ -256,6 +233,7 @@ public class BpmApp {
 
         claimandcompletetask.claimAndCompleteTask
                 (accessKey, secretKey, url, accessToken, "484a641c-a9f1-11ec-ad0f-8e1ac2659f4c", claimAndCompleteTaskParams);
+*/
 
 
     }

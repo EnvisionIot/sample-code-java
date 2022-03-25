@@ -3,6 +3,9 @@ package com.envisioniot.example.sample;
 
 import com.envisioniot.example.sample.aep.appportal.AppPortalApp;
 import com.envisioniot.example.sample.aep.bpm.BpmApp;
+import com.envisioniot.example.sample.aep.iamservice.IAMApp;
+import com.envisioniot.example.sample.aep.iamservice.LogIn;
+import com.envisioniot.example.sample.aep.notificationmanagement.NotificationManagementApp;
 import com.envisioniot.example.sample.edp.streamprocessing.StreamProcessingApp;
 import com.envisioniot.example.sample.edp.tsdbdata.TSDBDataApp;
 import com.envisioniot.example.sample.edp.tsdbpolicy.TSDBPolicyApp;
@@ -118,8 +121,8 @@ public class App {
         // Asset Service
         // https://support.envisioniot.com/docs/asset-api/en/2.3.0/overview.html
 
-        AssetApp asset = new AssetApp();
-        asset.assetAppGeneral(accessKey, secretKey, orgId, url);
+/*        AssetApp asset = new AssetApp();
+        asset.assetAppGeneral(accessKey, secretKey, orgId, url);*/
 
 
         // Alert
@@ -146,8 +149,17 @@ public class App {
 /*        AppPortalApp appPortalApp = new AppPortalApp();
         appPortalApp.appPortalGeneral(accessKey, secretKey, orgId, url);*/
 
+/*
         BpmApp bpmApp = new BpmApp();
         bpmApp.bpmAppGeneral(accessKey, secretKey, orgId, url);
+*/
+
+/*        IAMApp iamApp = new IAMApp();
+        iamApp.IAMAppGeneral(accessKey, secretKey, orgId, url);*/
+
+/*        NotificationManagementApp notificationManagementApp = new NotificationManagementApp();
+        notificationManagementApp.notificationManagementApp(accessKey, secretKey, orgId, url);*/
+
 
     }
 
