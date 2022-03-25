@@ -34,7 +34,7 @@ public class NotificationManagementApp {
         //  Send Template Mail - Parameters Map: Setting mandatory parameters
         sendTemplateMailParams.put("templateCode", "AMC_MAIL_CN_STEP_NOTIFI");
         List<String> addressList = new ArrayList<>();
-        addressList.add("arihant.jain@envision-digital.com");
+        addressList.add("");
         sendTemplateMailParams.put("toAddresses", addressList);
         sendTemplateMailParams.put("senderCode", "EnOS_Cloud");
         HashMap<String, String> sendTemplateMailVariables  = new HashMap<>();
@@ -62,7 +62,7 @@ public class NotificationManagementApp {
         JSONArray phoneJSONArray = new JSONArray();
         JSONObject phoneJSONObject = new JSONObject();
         phoneJSONObject.put("area", "65");
-        phoneJSONObject.put("number", "97695597");
+        phoneJSONObject.put("number", "");
         phoneJSONArray.add(phoneJSONObject);
 
         sendTemplateSMSParams.put("phones", phoneJSONArray);
