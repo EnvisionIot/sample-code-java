@@ -1,6 +1,8 @@
 package com.envisioniot.example.sample;
 
 
+import com.envisioniot.example.sample.edp.datafederation.DataFederationApp;
+import com.envisioniot.example.sample.iothub.connection.devicedata.ConnectionDeviceDataApp;
 import com.envisioniot.example.sample.utility.PropertyUtil;
 
 import java.io.IOException;
@@ -70,10 +72,10 @@ public class App {
 
         // Connection Services - Device Data
         // https://support.envisioniot.com/docs/connection-api/en/2.3.0/index_device_data.html
-/*
+
         ConnectionDeviceDataApp devicedata = new ConnectionDeviceDataApp();
         devicedata.connectionDeviceDataAppGeneral(accessKey, secretKey, orgId, url);
-*/
+
 
 
         // Connection Services - HTTP Message Integration
@@ -128,7 +130,7 @@ public class App {
 //        tsdbdataapp.tsdbDataAppGeneral(accessKey, secretKey, orgId, url);
 
         // Data Federation
-/*       DataFederationApp datafederationapp = new DataFederationApp();
+/*        DataFederationApp datafederationapp = new DataFederationApp();
         datafederationapp.dataFederationAppGeneral(accessKey, secretKey, orgId, url);*/
 
 

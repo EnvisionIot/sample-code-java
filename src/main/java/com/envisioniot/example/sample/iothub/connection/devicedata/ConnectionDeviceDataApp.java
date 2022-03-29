@@ -10,10 +10,10 @@ public class ConnectionDeviceDataApp {
         // deviceKey and assetId are viewable on enOS at IoT hub/Device Assets/View,
         // eventID is viewable on enOS at IoT hub/Device Assets/View/Commands
 
-        String productKey = "98683knm";
-        String deviceKey = "rGhMZ6daqj";
-        String assetId = "szxpLiGi";
-        String eventId = "202201129fba478d083db14a85439be769ad22b3";
+        String productKey = "cPMzNSos";
+        String deviceKey = "BXN0t2nkeR";
+        String assetId = "BHr1F9ox";
+        /*//String eventId = "202201129fba478d083db14a85439be769ad22b3";
 
 
         // Send two setMeasurementPoint command (Device is inactive)
@@ -70,18 +70,25 @@ public class ConnectionDeviceDataApp {
         // Get an event.
         GetEvent getevent = new GetEvent();
         getevent.getEvent(accessKey, secretKey, orgId, url, eventId);
+*/
 
 
-        // Download a file
+
+
+/*        // Download a file
         DownloadFile downloadfile = new DownloadFile();
-        downloadfile.downloadFile_assetId(accessKey,secretKey,orgId,url,assetId);
-        downloadfile.downloadFile_keys(accessKey,secretKey,orgId,url,productKey,deviceKey);
+        // device 1
+        downloadfile.downloadFile_assetId(accessKey,secretKey,orgId,url,assetId, fileUri1);
+        downloadfile.downloadFile_keys(accessKey,secretKey,orgId,url,productKey,deviceKey, fileUri1);*/
+
 
 
         // Delete a file
         DeleteFile deletefile = new DeleteFile();
-        deletefile.deleteFile_assetId(accessKey,secretKey,orgId,url,assetId);
-        deletefile.deleteFile_keys(accessKey,secretKey,orgId,url,productKey,deviceKey);
+        String fileUri1 = "enos-connect://29846b2932800000.txt";
+        String fileUri2 = "enos-connect://2981a9350f000000.txt";
+        deletefile.deleteFile_assetId(accessKey,secretKey,orgId,url,assetId, fileUri1);
+        deletefile.deleteFile_keys(accessKey,secretKey,orgId,url,productKey,deviceKey, fileUri2);
     }
 
 }

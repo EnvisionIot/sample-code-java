@@ -61,7 +61,8 @@ public class DeleteFile {
             String secretKey,
             String orgId,
             String url,
-            String assetId)
+            String assetId,
+            String fileUri)
     {
         String API_GW_URL  = url;
         String INTEGRATION_CHANNEL_URL  = "https://iot-http-integration-ppe1.envisioniot.com";
@@ -72,7 +73,7 @@ public class DeleteFile {
 
         DeviceInfo deviceInfo = new DeviceInfo().setAssetId(assetId);
         // fileUri is an enos scheme file uri
-        String fileUri = "enos-connect://29215f11ce800000.png";
+        //String fileUri = "enos-connect://29846cd9c3002000.txt";
 
         fileDelete(connection, deviceInfo, fileUri);
     }
@@ -83,7 +84,8 @@ public class DeleteFile {
             String orgId,
             String url,
             String productKey,
-            String deviceKey)
+            String deviceKey,
+            String fileUri)
     {
         String API_GW_URL  = url;
         String INTEGRATION_CHANNEL_URL  = "https://iot-http-integration-ppe1.envisioniot.com";
@@ -92,9 +94,9 @@ public class DeleteFile {
                 INTEGRATION_CHANNEL_URL, API_GW_URL, accessKey, secretKey, orgId)
                 .build();
 
-        DeviceInfo deviceInfo = new DeviceInfo().setKey("98683knm", "rGhMZ6daqj" );
+        DeviceInfo deviceInfo = new DeviceInfo().setKey(productKey, deviceKey);
         // fileUri is an enos scheme file uri
-        String fileUri = "enos-connect://29215f0c59000000.png";
+        //String fileUri = "enos-connect://29846cd9c3002000.txt";
 
         fileDelete(connection, deviceInfo, fileUri);
     }

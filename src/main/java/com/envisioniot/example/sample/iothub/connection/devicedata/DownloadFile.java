@@ -77,7 +77,8 @@ public class DownloadFile {
             String secretKey,
             String orgId,
             String url,
-            String assetId)
+            String assetId,
+            String fileUri)
     {
         String API_GW_URL  = url;
         String INTEGRATION_CHANNEL_URL  = "https://iot-http-integration-ppe1.envisioniot.com";
@@ -86,9 +87,9 @@ public class DownloadFile {
                 INTEGRATION_CHANNEL_URL, API_GW_URL, accessKey, secretKey, orgId)
                 .build();
 
-        DeviceInfo deviceInfo = new DeviceInfo().setAssetId("szxpLiGi");
+        DeviceInfo deviceInfo = new DeviceInfo().setAssetId(assetId);
         // fileUri is an enos scheme file uri
-        String fileUri = "enos-connect://29215f0c59000000.png";
+        //String fileUri = "enos-connect://29846cd9c3002000.txt";
 
         fileDownload(connection, deviceInfo, fileUri);
     }
@@ -99,7 +100,8 @@ public class DownloadFile {
             String orgId,
             String url,
             String productKey,
-            String deviceKey)
+            String deviceKey,
+            String fileUri)
     {
         String API_GW_URL  = url;
         String INTEGRATION_CHANNEL_URL  = "https://iot-http-integration-ppe1.envisioniot.com";
@@ -108,10 +110,9 @@ public class DownloadFile {
                 INTEGRATION_CHANNEL_URL, API_GW_URL, accessKey, secretKey, orgId)
                 .build();
 
-        DeviceInfo deviceInfo = new DeviceInfo().setKey("98683knm", "rGhMZ6daqj" +
-                "" );
+        DeviceInfo deviceInfo = new DeviceInfo().setKey(productKey, deviceKey);
         // fileUri is an enos scheme file uri
-        String fileUri = "enos-connect://29215f0c59000000.png";
+        //String fileUri = "enos-connect://29846cd9c3002000.txt";
 
         fileDownload(connection, deviceInfo, fileUri);
     }
