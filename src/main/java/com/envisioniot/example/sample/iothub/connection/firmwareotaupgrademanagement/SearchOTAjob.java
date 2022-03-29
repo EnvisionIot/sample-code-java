@@ -128,10 +128,10 @@ public class SearchOTAjob {
     {
         //Using the 'like' operator
         //search using a full default product name
-        String exp_like = "firmwareName.default like '" + "firmware_defaultName_1.2" + "'";
-       // String exp_like = "firmwareName.default like '" + "firmware_defaultName_1.1" + "'";
+        String exp_like = "firmwareName.defaultValue like '" + "firmware_defaultName_1.2" + "'";
+        //String exp_like = "firmwareName.defaultValue like '" + "firmware_defaultName_1.1" + "'";
         //search using a partial default product name
-        String exp_like_fuzzy = "firmwareName.default like '" + "e_1.2" + "'";
+        String exp_like_fuzzy = "firmwareName.defaultValue like '" + "e_1.2" + "'";
 
         searchBy(accessKey, secretKey, orgId, url, exp_like);
         searchBy(accessKey, secretKey, orgId, url, exp_like_fuzzy);
@@ -144,10 +144,17 @@ public class SearchOTAjob {
             String url){
 
         //Using 'like' operators for matching partial locale device names
+/*
         String exp_fuzzy_cn = "firmwareName.zh_CN like '" + "件_1.2" + "'";
         String exp_fuzzy_us = "firmwareName.en_US like '" + "mware_1.2" + "'";
         String exp_fuzzy_jp = "firmwareName.ja_JP like '" + "ア_1.2" + "'";
         String exp_fuzzy_es = "firmwareName.es_ES like '" + "o_1.2" + "'";
+*/
+
+        String exp_fuzzy_cn = "firmwareName like '" + "件_1.2" + "'";
+        String exp_fuzzy_us = "firmwareName like '" + "mware_1.2" + "'";
+        String exp_fuzzy_jp = "firmwareName like '" + "ア_1.2" + "'";
+        String exp_fuzzy_es = "firmwareName like '" + "o_1.2" + "'";
 
         searchBy(accessKey, secretKey, orgId, url, exp_fuzzy_cn);
         searchBy(accessKey, secretKey, orgId, url, exp_fuzzy_us);

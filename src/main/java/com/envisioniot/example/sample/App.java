@@ -1,24 +1,6 @@
 package com.envisioniot.example.sample;
 
 
-import com.envisioniot.example.sample.aep.appportal.AppPortalApp;
-import com.envisioniot.example.sample.aep.bpm.BpmApp;
-import com.envisioniot.example.sample.aep.iamservice.IAMApp;
-import com.envisioniot.example.sample.aep.iamservice.LogIn;
-import com.envisioniot.example.sample.aep.notificationmanagement.NotificationManagementApp;
-import com.envisioniot.example.sample.edp.streamprocessing.StreamProcessingApp;
-import com.envisioniot.example.sample.edp.tsdbdata.TSDBDataApp;
-import com.envisioniot.example.sample.edp.tsdbpolicy.TSDBPolicyApp;
-import com.envisioniot.example.sample.iothub.connection.device.ConnectionDeviceApp;
-import com.envisioniot.example.sample.iothub.connection.devicedata.ConnectionDeviceDataApp;
-import com.envisioniot.example.sample.iothub.connection.gatewayandsubdevice.ConnectionGatewayAndSubdeviceApp;
-import com.envisioniot.example.sample.iothub.connection.product.ConnectionProductApp;
-import com.envisioniot.example.sample.iothub.model.ModelApp;
-import com.envisioniot.example.sample.iothub.alert.AlertApp;
-import com.envisioniot.example.sample.iothub.asset.AssetApp;
-import com.envisioniot.example.sample.iothub.connection.firmwaremanagement.ConnectionFirmwareManagementApp;
-import com.envisioniot.example.sample.iothub.connection.firmwareotaupgrademanagement.ConnectionFirmwareOTAupgradeManagementApp;
-import com.envisioniot.example.sample.iothub.connection.httpmessageintegration.ConnectionHttpApp;
 import com.envisioniot.example.sample.utility.PropertyUtil;
 
 import java.io.IOException;
@@ -112,10 +94,10 @@ public class App {
 
         // Connection Services - Firmware OTA upgrade Management
         //https://support.envisioniot.com/docs/connection-api/en/2.3.0/index_ota.html
-/*
-        ConnectionFirmwareOTAupgradeManagementApp firmwareotaupgrademanagement = new ConnectionFirmwareOTAupgradeManagementApp();
-        firmwareotaupgrademanagement.firmwareOTAupgradeManagement(accessKey, secretKey, orgId, url);
-*/
+
+/*        ConnectionFirmwareOTAupgradeManagementApp firmwareotaupgrademanagement = new ConnectionFirmwareOTAupgradeManagementApp();
+        firmwareotaupgrademanagement.firmwareOTAupgradeManagement(accessKey, secretKey, orgId, url);*/
+
 
 
         // Asset Service
@@ -144,6 +126,15 @@ public class App {
 
 //        TSDBDataApp tsdbdataapp = new TSDBDataApp();
 //        tsdbdataapp.tsdbDataAppGeneral(accessKey, secretKey, orgId, url);
+
+        // Data Federation
+/*       DataFederationApp datafederationapp = new DataFederationApp();
+        datafederationapp.dataFederationAppGeneral(accessKey, secretKey, orgId, url);*/
+
+
+/*        // Batch Processing
+        BatchProcessingApp batchprocessingapp = new BatchProcessingApp();
+        batchprocessingapp.batchProcessingAppGeneral(accessKey, secretKey, orgId, url);*/
 
 
 /*        AppPortalApp appPortalApp = new AppPortalApp();

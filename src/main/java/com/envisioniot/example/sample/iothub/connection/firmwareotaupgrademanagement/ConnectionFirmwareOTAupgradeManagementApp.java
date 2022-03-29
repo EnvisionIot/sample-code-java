@@ -11,6 +11,7 @@ import com.envisioniot.example.sample.iothub.simulator.ReportFirmwareVersion;
 
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.Scanner;
 
 public class ConnectionFirmwareOTAupgradeManagementApp {
     public void firmwareOTAupgradeManagement(String accessKey, String secretKey, String orgId, String url){
@@ -87,12 +88,17 @@ public class ConnectionFirmwareOTAupgradeManagementApp {
         CreateJobResponse jobUpgradeTo_v1_2_Info = createotajob.createOTAjob_upgradeTask(accessKey,
                 secretKey, orgId, url, firmwareId_v1_2, deviceToUpgradeSet, versionNumberHashSet);
 
+        Scanner input = new Scanner(System.in);
+        System.out.println("continue?");
+        String ans = input.nextLine();
+
         // Get job information
         GetOTAjob getotajob = new GetOTAjob();
         getotajob.getOTAjob(accessKey, secretKey, orgId, url, jobUpgradeTo_v1_2_Info.getData().getJobId());
 
         // Search jobs
         SearchOTAjob searchotajob = new SearchOTAjob();
+        System.out.println("\n\n\n");
         System.out.println("searchOTAjob_productKey");
         searchotajob.searchOTAjob_productKey(accessKey, secretKey, orgId, url, productKey);
         System.out.println("searchOTAjob_firmwareId");
@@ -105,8 +111,12 @@ public class ConnectionFirmwareOTAupgradeManagementApp {
         searchotajob.searchOTAjob_status(accessKey, secretKey, orgId, url, "stopped");
         System.out.println("searchOTAjob_defaultName");
         searchotajob.searchOTAjob_defaultName(accessKey, secretKey, orgId, url);
-        System.out.println("searchOTAjob_localeName");
+
+
+        System.out.println("\n\n\nsearchOTAjob_localeName");
         searchotajob.searchOTAjob_localeName(accessKey, secretKey, orgId, url);
+        System.out.println("\n\n\n");
+
 
         // Search tasks
         SearchOTAtask searchotatask = new SearchOTAtask();
