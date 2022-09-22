@@ -1,8 +1,7 @@
 package com.envisioniot.example.sample;
 
 
-import com.envisioniot.example.sample.edp.datafederation.DataFederationApp;
-import com.envisioniot.example.sample.iothub.connection.devicedata.ConnectionDeviceDataApp;
+import com.envisioniot.example.sample.connection.devicedata.ConnectionDeviceDataApp;
 import com.envisioniot.example.sample.utility.PropertyUtil;
 
 import java.io.IOException;
