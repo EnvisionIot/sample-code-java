@@ -24,13 +24,12 @@ public class BatchCreateDevice {
 
         // Setting your device's organisational ID and timezone.
         request.setOrgId(orgId);
-        request.setProductKey("dsadsad"); // input productKey
 
         DeviceCreateVo deviceCreateVo = new DeviceCreateVo();
 
         // Setting your device's description.
         deviceCreateVo.setDeviceDesc("yourDeviceDesc");
-        deviceCreateVo.setProductKey("productKey");
+        deviceCreateVo.setProductKey("productKey"); // input productKey
 
         // Setting your device's names (can be non-unique)
         StringI18n deviceName = new StringI18n("yourDefaultDeviceName");
