@@ -53,6 +53,7 @@ public class MetricQueryPost {
         request.setQueryParam("orgId", orgId);
         request.setBodyParams("orgId", orgId);
         request.setBodyParams("metrics", metrics);
+        request.setBodyParams("mdmIds", mdmIds);
         request.setBodyParams("startTime", startTime);
         request.setBodyParams("endTime", endTime);
         request.setBodyParams("extraFields", extraFields);
