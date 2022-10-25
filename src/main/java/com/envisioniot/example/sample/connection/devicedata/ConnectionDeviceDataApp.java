@@ -72,23 +72,6 @@ public class ConnectionDeviceDataApp {
         getevent.getEvent(accessKey, secretKey, orgId, url, eventId);
 */
 
-
-
-
-/*        // Download a file
-        DownloadFile downloadfile = new DownloadFile();
-        // device 1
-        downloadfile.downloadFile_assetId(accessKey,secretKey,orgId,url,assetId, fileUri1);
-        downloadfile.downloadFile_keys(accessKey,secretKey,orgId,url,productKey,deviceKey, fileUri1);*/
-
-
-
-        // Delete a file
-        DeleteFile deletefile = new DeleteFile();
-        String fileUri1 = "enos-connect://29846b2932800000.txt";
-        String fileUri2 = "enos-connect://2981a9350f000000.txt";
-        deletefile.deleteFile_assetId(accessKey,secretKey,orgId,url,assetId, fileUri1);
-        deletefile.deleteFile_keys(accessKey,secretKey,orgId,url,productKey,deviceKey, fileUri2);
     }
 
 }

@@ -60,7 +60,7 @@ public class SearchRelatedAssetNode {
 
         RelatedAssetSearchVo filter7 = new RelatedAssetSearchVo();
         I18nSearchVo i18nSearchVo2 = new I18nSearchVo();
-        i18nSearchVo.setValue("SG_Demo_Edge");
+        i18nSearchVo2.setValue("SG_Demo_Edge");
         filter7.setNameLike(i18nSearchVo2);
         searchRelatedAssetNodeUnderChild(accessKey, secretKey, orgId, url, filter7);
 

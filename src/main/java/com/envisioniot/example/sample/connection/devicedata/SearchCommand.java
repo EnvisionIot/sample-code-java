@@ -303,9 +303,7 @@ public class SearchCommand {
 
         // Setting the expression
         // note: the value used in the expression is a UNIX timestamp. 1641968127060
-        //String exp_moreThan = "createTime > \"2022-01-12 00:00:00\"";
         String exp_lessThan = "createTime < \"2022-01-12 12:13:25\"";
-        //String exp_equalsTo = "createTime = \"2022-01-12 12:13:25\"";
         String exp_moreThanEqualTo = "createTime >= \"2022-01-12 12:29:55\"";
 
         ProjectionList.add("commandId");
