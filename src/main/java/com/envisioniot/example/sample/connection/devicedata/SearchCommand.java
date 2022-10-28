@@ -190,17 +190,13 @@ public class SearchCommand {
         ArrayList<String> ProjectionList = new ArrayList<>();
 
         // Setting the expression
-        String exp_moreThan = "createTime > \"2022-01-12 00:00:00\"";
         String exp_lessThan = "createTime < \"2022-01-12 12:13:25\"";
-        String exp_equalsTo = "createTime = \"2022-01-12 12:13:25\"";
         String exp_moreThanEqualTo = "createTime >= \"2022-01-12 12:29:55\"";
 
         ProjectionList.add("commandId");
 
         // Use assetId to identify device (whose commands will be searched through)
-        searchBy_assetId(accessKey, secretKey, orgId, url, exp_moreThan, assetId, ProjectionList);
         searchBy_assetId(accessKey, secretKey, orgId, url, exp_lessThan, assetId, ProjectionList);
-        searchBy_assetId(accessKey, secretKey, orgId, url, exp_equalsTo, assetId, ProjectionList);
         searchBy_assetId(accessKey, secretKey, orgId, url, exp_moreThanEqualTo, assetId, ProjectionList);
     }
 
