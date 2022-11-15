@@ -7,7 +7,7 @@
  * History:
  * <author>          <time>          <version>          <desc>
  */
-package com.envisioniot.example.sample.aep.appportal.auth;
+package com.envisioniot.example.sample.appportal.auth;
 
 import com.alibaba.fastjson.JSON;
 import com.envision.apim.poseidon.config.PConfig;

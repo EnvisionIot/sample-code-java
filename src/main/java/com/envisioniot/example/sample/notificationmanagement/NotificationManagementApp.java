@@ -8,7 +8,7 @@
  * <author>          <time>          <version>          <desc>
  */
 
-package com.envisioniot.example.sample.aep.notificationmanagement;
+package com.envisioniot.example.sample.notificationmanagement;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;

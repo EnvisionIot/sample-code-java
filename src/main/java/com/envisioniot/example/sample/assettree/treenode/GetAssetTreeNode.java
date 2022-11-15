@@ -7,7 +7,7 @@
  * History:
  * <author>          <time>          <version>          <desc>
  */
-package com.envisioniot.example.sample.asset.treenode;
+package com.envisioniot.example.sample.assettree.treenode;
 
 import com.envision.apim.poseidon.config.PConfig;
 import com.envision.apim.poseidon.core.Poseidon;

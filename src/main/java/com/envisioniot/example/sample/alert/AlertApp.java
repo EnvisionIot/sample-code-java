@@ -7,32 +7,32 @@
  * History:
  * <author>          <time>          <version>          <desc>
  */
-package com.envisioniot.example.sample.iothub.alert;
+package com.envisioniot.example.sample.alert;
 
 import com.envisioniot.enos.api.common.constant.request.Pagination;
 import com.envisioniot.enos.api.common.constant.request.Sorter;
-import com.envisioniot.example.sample.iothub.alert.content.*;
-import com.envisioniot.example.sample.iothub.alert.record.*;
-import com.envisioniot.example.sample.iothub.alert.record.old.*;
-import com.envisioniot.example.sample.iothub.alert.record.old.history.CreateHistoryAlert;
-import com.envisioniot.example.sample.iothub.alert.record.old.history.CreateHistoryAlertBatch;
-import com.envisioniot.example.sample.iothub.alert.record.old.history.ScrollHistoryAlert;
-import com.envisioniot.example.sample.iothub.alert.record.old.history.SearchHistoryAlert;
-import com.envisioniot.example.sample.iothub.alert.record.old.tag.BatchUpdateActiveAlertTags;
-import com.envisioniot.example.sample.iothub.alert.record.old.tag.UpdateActiveAlertTags;
-import com.envisioniot.example.sample.iothub.alert.record.old.tag.UpdateHistoryAlertTags;
-import com.envisioniot.example.sample.iothub.alert.rule.CreateAlertRule;
-import com.envisioniot.example.sample.iothub.alert.rule.DeleteAlertRule;
-import com.envisioniot.example.sample.iothub.alert.rule.SearchAlertRule;
-import com.envisioniot.example.sample.iothub.alert.rule.UpdateAlertRule;
-import com.envisioniot.example.sample.iothub.alert.severity.CreateAlertSeverity;
-import com.envisioniot.example.sample.iothub.alert.severity.DeleteAlertSeverity;
-import com.envisioniot.example.sample.iothub.alert.severity.SearchAlertSeverity;
-import com.envisioniot.example.sample.iothub.alert.severity.UpdateAlertSeverity;
-import com.envisioniot.example.sample.iothub.alert.type.CreateAlertType;
-import com.envisioniot.example.sample.iothub.alert.type.DeleteAlertType;
-import com.envisioniot.example.sample.iothub.alert.type.SearchAlertType;
-import com.envisioniot.example.sample.iothub.alert.type.UpdateAlertType;
+import com.envisioniot.example.sample.alert.content.*;
+import com.envisioniot.example.sample.alert.record.*;
+import com.envisioniot.example.sample.alert.record.old.*;
+import com.envisioniot.example.sample.alert.record.old.history.CreateHistoryAlert;
+import com.envisioniot.example.sample.alert.record.old.history.CreateHistoryAlertBatch;
+import com.envisioniot.example.sample.alert.record.old.history.ScrollHistoryAlert;
+import com.envisioniot.example.sample.alert.record.old.history.SearchHistoryAlert;
+import com.envisioniot.example.sample.alert.record.old.tag.BatchUpdateActiveAlertTags;
+import com.envisioniot.example.sample.alert.record.old.tag.UpdateActiveAlertTags;
+import com.envisioniot.example.sample.alert.record.old.tag.UpdateHistoryAlertTags;
+import com.envisioniot.example.sample.alert.rule.CreateAlertRule;
+import com.envisioniot.example.sample.alert.rule.DeleteAlertRule;
+import com.envisioniot.example.sample.alert.rule.SearchAlertRule;
+import com.envisioniot.example.sample.alert.rule.UpdateAlertRule;
+import com.envisioniot.example.sample.alert.severity.CreateAlertSeverity;
+import com.envisioniot.example.sample.alert.severity.DeleteAlertSeverity;
+import com.envisioniot.example.sample.alert.severity.SearchAlertSeverity;
+import com.envisioniot.example.sample.alert.severity.UpdateAlertSeverity;
+import com.envisioniot.example.sample.alert.type.CreateAlertType;
+import com.envisioniot.example.sample.alert.type.DeleteAlertType;
+import com.envisioniot.example.sample.alert.type.SearchAlertType;
+import com.envisioniot.example.sample.alert.type.UpdateAlertType;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

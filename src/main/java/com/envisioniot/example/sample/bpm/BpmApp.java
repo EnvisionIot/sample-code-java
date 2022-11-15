@@ -1,11 +1,11 @@
-package com.envisioniot.example.sample.aep.bpm;
+package com.envisioniot.example.sample.bpm;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.envisioniot.example.sample.aep.appportal.auth.Login;
-import com.envisioniot.example.sample.aep.appportal.userandorg.ChooseOrganization;
-import com.envisioniot.example.sample.aep.bpm.process.*;
-import com.envisioniot.example.sample.aep.bpm.task.*;
+import com.envisioniot.example.sample.appportal.auth.Login;
+import com.envisioniot.example.sample.appportal.userandorg.ChooseOrganization;
+import com.envisioniot.example.sample.bpm.process.*;
+import com.envisioniot.example.sample.bpm.task.*;
 import org.apache.commons.collections4.Get;
 
 import java.io.File;

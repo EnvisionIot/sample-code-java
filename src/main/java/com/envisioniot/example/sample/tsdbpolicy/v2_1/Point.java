@@ -1,4 +1,4 @@
-package com.envisioniot.example.sample.edp.tsdbpolicy.v2_1;
+package com.envisioniot.example.sample.tsdbpolicy.v2_1;
 
 public class Point {
     private final String pointId;

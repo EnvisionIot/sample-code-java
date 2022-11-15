@@ -7,7 +7,7 @@
  * History:
  * <author>          <time>          <version>          <desc>
  */
-package com.envisioniot.example.sample.iothub.alert.record.old.tag;
+package com.envisioniot.example.sample.alert.record.old.tag;
 
 import com.envision.apim.poseidon.config.PConfig;
 import com.envision.apim.poseidon.core.Poseidon;

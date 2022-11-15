@@ -7,7 +7,7 @@
  * History:
  * <author>          <time>          <version>          <desc>
  */
-package com.envisioniot.example.sample.iothub.alert.severity;
+package com.envisioniot.example.sample.alert.severity;
 
 import com.envision.apim.poseidon.config.PConfig;
 import com.envision.apim.poseidon.core.Poseidon;

@@ -7,7 +7,7 @@
  * History:
  * <author>          <time>          <version>          <desc>
  */
-package com.envisioniot.example.sample.aep.appportal.asset;
+package com.envisioniot.example.sample.appportal.asset;
 
 
 import com.envision.apim.poseidon.config.PConfig;

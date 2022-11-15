@@ -9,7 +9,7 @@
  */
 package com.envisioniot.example.sample.asset;
 
-import com.envisioniot.example.sample.asset.tree.*;
+import com.envisioniot.example.sample.assettree.tree.*;
 
 /**
  * 〈一句话功能简述〉<br> 

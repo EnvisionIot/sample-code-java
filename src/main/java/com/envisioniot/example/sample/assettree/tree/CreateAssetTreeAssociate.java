@@ -7,7 +7,7 @@
  * History:
  * <author>          <time>          <version>          <desc>
  */
-package com.envisioniot.example.sample.asset.tree;
+package com.envisioniot.example.sample.assettree.tree;
 
 import com.envision.apim.poseidon.config.PConfig;
 import com.envision.apim.poseidon.core.Poseidon;

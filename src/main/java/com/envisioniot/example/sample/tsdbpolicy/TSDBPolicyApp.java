@@ -1,10 +1,10 @@
-package com.envisioniot.example.sample.edp.tsdbpolicy;
+package com.envisioniot.example.sample.tsdbpolicy;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.envisioniot.example.sample.edp.tsdbpolicy.v2_0.GetStoragePolicy;
-import com.envisioniot.example.sample.edp.tsdbpolicy.v2_0.SaveStoragePolicy;
-import com.envisioniot.example.sample.edp.tsdbpolicy.v2_1.*;
+import com.envisioniot.example.sample.tsdbpolicy.v2_0.GetStoragePolicy;
+import com.envisioniot.example.sample.tsdbpolicy.v2_0.SaveStoragePolicy;
+import com.envisioniot.example.sample.tsdbpolicy.v2_1.*;
 
 public class TSDBPolicyApp {
     public void tsdbPolicyAppGeneral(String accessKey, String secretKey, String orgId, String url) {

@@ -1,4 +1,4 @@
-package com.envisioniot.example.sample.edp.tsdbpolicy.v2_0;
+package com.envisioniot.example.sample.tsdbpolicy.v2_0;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;

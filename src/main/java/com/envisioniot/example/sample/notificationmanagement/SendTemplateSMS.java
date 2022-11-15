@@ -8,7 +8,7 @@
  * <author>          <time>          <version>          <desc>
  */
 
-package com.envisioniot.example.sample.aep.notificationmanagement;
+package com.envisioniot.example.sample.notificationmanagement;
 
 import com.alibaba.fastjson.JSONObject;
 import com.envision.apim.poseidon.config.PConfig;

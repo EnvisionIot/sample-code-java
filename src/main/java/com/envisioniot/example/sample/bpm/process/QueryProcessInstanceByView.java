@@ -8,7 +8,7 @@
  * <author>          <time>          <version>          <desc>
  */
 
-package com.envisioniot.example.sample.aep.bpm.process;
+package com.envisioniot.example.sample.bpm.process;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;

@@ -7,7 +7,7 @@
  * History:
  * <author>          <time>          <version>          <desc>
  */
-package com.envisioniot.example.sample.edp.batchprocessing.v2_0;
+package com.envisioniot.example.sample.batchprocessing.v2_0;
 
 import com.alibaba.fastjson.JSONObject;
 import com.envision.apim.poseidon.config.PConfig;

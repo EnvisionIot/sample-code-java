@@ -1,4 +1,4 @@
-package com.envisioniot.example.sample.edp.datafederation;
+package com.envisioniot.example.sample.datafederation;
 
 import com.alibaba.fastjson.JSONObject;
 import com.envision.apim.poseidon.config.PConfig;

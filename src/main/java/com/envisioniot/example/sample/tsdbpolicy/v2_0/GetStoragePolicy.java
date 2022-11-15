@@ -1,4 +1,4 @@
-package com.envisioniot.example.sample.edp.tsdbpolicy.v2_0;
+package com.envisioniot.example.sample.tsdbpolicy.v2_0;
 
 import com.envision.apim.poseidon.config.PConfig;
 import com.envision.apim.poseidon.core.Poseidon;

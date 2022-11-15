@@ -22,11 +22,11 @@ import com.alibaba.fastjson.JSONObject;
 import com.envision.apim.poseidon.config.PConfig;
 import com.envision.apim.poseidon.core.Poseidon;
 import com.envision.apim.poseidon.request.PoseidonRequest;
-import com.envisioniot.example.sample.iothub.alert.record.old.CreateActiveAlert;
-import com.envisioniot.example.sample.iothub.alert.record.old.CreateActiveAlertBatch;
-import com.envisioniot.example.sample.iothub.alert.record.old.SearchActiveAlert;
-import com.envisioniot.example.sample.iothub.alert.record.old.history.SearchHistoryAlert;
-import com.envisioniot.example.sample.iothub.alert.rule.SearchAlertRule;
+import com.envisioniot.example.sample.alert.record.old.CreateActiveAlert;
+import com.envisioniot.example.sample.alert.record.old.CreateActiveAlertBatch;
+import com.envisioniot.example.sample.alert.record.old.SearchActiveAlert;
+import com.envisioniot.example.sample.alert.record.old.history.SearchHistoryAlert;
+import com.envisioniot.example.sample.alert.rule.SearchAlertRule;
 import com.envisioniot.example.sample.utility.PropertyUtil;
 import org.junit.Before;
 

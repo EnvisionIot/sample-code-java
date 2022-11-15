@@ -1,8 +1,8 @@
-package com.envisioniot.example.sample.edp.tsdbdata;
+package com.envisioniot.example.sample.tsdbdata;
 
-import com.envisioniot.example.sample.edp.tsdbdata.v2_1.FilterLatestAssetData;
-import com.envisioniot.example.sample.edp.tsdbdata.v2_1.GetAssetAIDataAggregationLogic;
-import com.envisioniot.example.sample.edp.tsdbdata.v2_1.GetAssetAIRawData;
+import com.envisioniot.example.sample.tsdbdata.v2_1.FilterLatestAssetData;
+import com.envisioniot.example.sample.tsdbdata.v2_1.GetAssetAIDataAggregationLogic;
+import com.envisioniot.example.sample.tsdbdata.v2_1.GetAssetAIRawData;
 
 public class TSDBDataApp {
     public void tsdbDataAppGeneral(String accessKey, String secretKey, String orgId, String url) {

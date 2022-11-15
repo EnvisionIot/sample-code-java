@@ -1,4 +1,4 @@
-package com.envisioniot.example.sample.edp.streamprocessing;
+package com.envisioniot.example.sample.streamprocessing;
 public class StreamProcessingApp {
 
     public void streamProcessingAppGeneral(String accessKey, String secretKey, String orgId, String url) {

@@ -7,12 +7,12 @@
  * History:
  * <author>          <time>          <version>          <desc>
  */
-package com.envisioniot.example.sample.aep.appportal;
+package com.envisioniot.example.sample.appportal;
 
-import com.envisioniot.example.sample.aep.appportal.application.*;
-import com.envisioniot.example.sample.aep.appportal.asset.*;
-import com.envisioniot.example.sample.aep.appportal.auth.*;
-import com.envisioniot.example.sample.aep.appportal.userandorg.*;
+import com.envisioniot.example.sample.appportal.application.*;
+import com.envisioniot.example.sample.appportal.asset.*;
+import com.envisioniot.example.sample.appportal.auth.*;
+import com.envisioniot.example.sample.appportal.userandorg.*;
 
 /**
  * 〈一句话功能简述〉<br> 

@@ -7,7 +7,7 @@
  * History:
  * <author>          <time>          <version>          <desc>
  */
-package com.envisioniot.example.sample.edp.streamprocessing;
+package com.envisioniot.example.sample.streamprocessing;
 
 import com.alibaba.fastjson.JSONObject;
 import com.envision.apim.poseidon.config.PConfig;

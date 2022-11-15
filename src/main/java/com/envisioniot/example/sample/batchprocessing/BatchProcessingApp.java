@@ -1,9 +1,9 @@
-package com.envisioniot.example.sample.edp.batchprocessing;
+package com.envisioniot.example.sample.batchprocessing;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.envisioniot.example.sample.edp.batchprocessing.v2_0.*;
-import com.envisioniot.example.sample.edp.batchprocessing.v2_1.*;
+import com.envisioniot.example.sample.batchprocessing.v2_0.*;
+import com.envisioniot.example.sample.batchprocessing.v2_1.*;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
