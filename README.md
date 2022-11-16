@@ -7,7 +7,7 @@ This repository includes code samples to use EnOS™ APIs in Java. To learn more
 
 ## Prerequisites
 
-Before using the code samples, complete the tasks described in [Using Python SDK](https://support.envisioniot.com/docs/api/en/2.4.0/gettingstarted.html#using-java-sdk).
+Before using the code samples, complete the tasks described in [Using Java SDK](https://support.envisioniot.com/docs/api/en/2.4.0/gettingstarted.html#using-java-sdk).
 
 
 ## Using the Code Samples
