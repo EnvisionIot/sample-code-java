@@ -114,6 +114,23 @@
       <version>0.0.15-SNAPSHOT</version>
     </dependency>
 
+    <dependency>
+      <groupId>com.envisioniot.enos</groupId>
+      <artifactId>amc-api-pojo</artifactId>
+      <version>0.0.5-SNAPSHOT</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>apim-poseidon</artifactId>
+          <groupId>com.envisioniot</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>enos-commons-api-pojo</artifactId>
+          <groupId>com.envisioniot</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
+
   </dependencies>
 
   <build>
