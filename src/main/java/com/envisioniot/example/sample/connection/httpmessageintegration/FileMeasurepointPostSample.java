@@ -19,8 +19,8 @@ import java.util.HashMap;
  */
 public class FileMeasurepointPostSample {
     // EnOS API Gateway URL and HTTP Integration Channel URL, which can be obtained from Environment Information page in EnOS Console
-    static final String API_GW_URL = "http://api_gw_url";
-    static final String INTEGRATION_CHANNEL_URL = "http://integration_channel_url";
+    static final String API_GW_URL = "https://api_gw_url";
+    static final String INTEGRATION_CHANNEL_URL = "https://integration_channel_url";
 
     // EnOS Application AccessKey and SecretKey, which can be obtain in Application Registration page in EnOS Console
     static final String APP_KEY = "appKey";

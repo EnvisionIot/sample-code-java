@@ -18,8 +18,8 @@ import java.util.HashMap;
  */
 public class OfflineIntegrationSample {
     // EnOS Token Server URL and HTTP Broker URL, which can be obtained from Environment Information page in EnOS Console
-    static final String TOKEN_SERVER_URL = "http://token_server_url";
-    static final String BROKER_URL = "http://broker_url";
+    static final String TOKEN_SERVER_URL = "https://token_server_url";
+    static final String BROKER_URL = "https://broker_url";
 
     // EnOS Application AccessKey and SecretKey, which can be obtain in Application Registration page in EnOS Console
     static final String APP_KEY = "appKey";
