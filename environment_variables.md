@@ -1,3 +1,3 @@
-|参数名称|参数描述|参数类型|默认值|是否可空|参数来源|备注|
+|Parameter Name|Description|Type|Default Value|Mandatory/Optional|How to get|Note|
 | --- | ---| ---| --- | ---| ---|---|
-|orgId|组织Id| Integer| 无 | 否 | 登录之后组织信息可以看到| 无| 
+|orgId|The organization ID.| Integer| N/A | Mandatory | In the left navigation bar of the EnOS Management Console, click IAM > Organization Profile . The Organization ID is the orgld.| None********************| 
