@@ -81,13 +81,13 @@ public class SearchCommand {
 
     private String timeToUnix(String timeToConvert){
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        Date date = null;
         try {
-            date = format.parse(timeToConvert);
+            Date date = format.parse(timeToConvert);
+            return String.valueOf(date.getTime());
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        return String.valueOf(date.getTime());
+        return null;
     }
 
     /*
