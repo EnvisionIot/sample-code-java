@@ -59,9 +59,9 @@ public class ConnectionGatewayAndSubdeviceApp {
         // note: Ensure you have already created a topography consisting of a gateway device and sub-devices.
 
         // Sub-device information
-        String sd1ProductKey = device1_Info.getProductKey(); //e.g. c0nFQVVO
-        String sd1DeviceKey = device1_Info.getDeviceKey(); //e.g. BBa0fbGN
-        String sd1AssetId = device1_Info.getAssetId(); //e.g. GVhaSG8ZUZ
+        String sd1ProductKey = device1_Info.getProductKey();
+        String sd1DeviceKey = device1_Info.getDeviceKey();
+        String sd1AssetId = device1_Info.getAssetId();
         String sd2ProductKey = device2_Info.getProductKey();
         String sd2DeviceKey = device2_Info.getDeviceKey();
         String sd2AssetId = device2_Info.getAssetId();

@@ -28,7 +28,7 @@ public class GetAsset {
     public void getAsset(String accessKey, String secretKey, String orgId, String url) {
         GetAssetRequest request = new GetAssetRequest();
         request.setOrgId(orgId);
-        request.setAssetId("TGXTCXg1");
+        request.setAssetId("assetId");
         GetAssetResponse response = Poseidon.config(PConfig.init().appKey(accessKey)
                         .appSecret(secretKey).debug())
                 .url(url)

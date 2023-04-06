@@ -28,8 +28,8 @@ public class DeleteAssetNode {
     public void deleteAssetNode(String accessKey, String secretKey, String orgId, String url) {
         DeleteAssetNodeRequest request = new DeleteAssetNodeRequest();
         request.setOrgId(orgId);
-        request.setTreeId("U22GDyrC");
-        request.setAssetId("hfuU7D1H");
+        request.setTreeId("treeId");
+        request.setAssetId("assetId");
         DeleteAssetNodeResponse response = Poseidon.config(PConfig.init().appKey(accessKey).appSecret(secretKey).debug())
                 .url(url).getResponse(request, DeleteAssetNodeResponse.class);
     }

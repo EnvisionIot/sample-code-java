@@ -11,9 +11,9 @@ import java.util.List;
 public class ListCertificate {
 
     public void listCertificate(String accessKey, String secretKey, String orgId, String url) {
-        String yourProductKey = "qvO9qxEV";
-        String yourDeviceKey = "KoLX5HGobx";
-        String yourAssetId = "LbOOKFet";
+        String yourProductKey = "pk";
+        String yourDeviceKey = "dk";
+        String yourAssetId = "assetId";
 
         ListCertificatesRequest listCertificatesRequest = new ListCertificatesRequest();
         listCertificatesRequest.setOrgId(orgId);

@@ -35,7 +35,7 @@ public class ModelApp {
         searchthingmodel.searchmodel_withexpression(accessKey, secretKey, orgId, url, "modelId in ( 'demo_lift_model' )");
         searchthingmodel.searchmodel_withexpression(accessKey, secretKey, orgId, url, "modelId in ( \"EnOS_Solar_Site\" )");
 
-        searchthingmodel.searchmodel_withexpression(accessKey, secretKey, orgId, url, "tags.amc_solar_o15952073792221_product = 'tA4ZSAFR' ");
+        searchthingmodel.searchmodel_withexpression(accessKey, secretKey, orgId, url, "tags.amc_solar_o15952073792221_product = 'tag1' ");
 
         searchthingmodel.searchmodel_withexpression(accessKey, secretKey, orgId, url, "attribute_tags.location = \"singapore\" ");
 

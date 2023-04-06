@@ -27,7 +27,7 @@ public class GetAssetTree {
     public void getAssetTree(String accessKey, String secretKey, String orgId, String url) {
         GetAssetTreeRequest request = new GetAssetTreeRequest();
         request.setOrgId(orgId);
-        request.setTreeId("y4wNuWEp");
+        request.setTreeId("TreeId");
         GetAssetTreeResponse response = Poseidon.config(PConfig.init().appKey(accessKey).appSecret(secretKey).debug())
                 .url(url)
                 .getResponse(request, GetAssetTreeResponse.class);

@@ -10,9 +10,9 @@ public class ConnectionDeviceDataApp {
         // deviceKey and assetId are viewable on enOS at IoT hub/Device Assets/View,
         // eventID is viewable on enOS at IoT hub/Device Assets/View/Commands
 
-        String productKey = "cPMzNSos";
-        String deviceKey = "BXN0t2nkeR";
-        String assetId = "BHr1F9ox";
+        String productKey = "pk";
+        String deviceKey = "dk";
+        String assetId = "assetId";
         /*//String eventId = "202201129fba478d083db14a85439be769ad22b3";
 
 

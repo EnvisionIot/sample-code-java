@@ -9,7 +9,7 @@ import com.envisioniot.enos.iot_mqtt_sdk.message.upstream.ota.*;
 public class ReportFirmwareVersion {
     public void reportFirmwareVersion(String secretKey, String productKey, String deviceKey, String version){
 
-        String brokerUrl = "tcp://mqtt-ppe1.envisioniot.com:11883";
+        String brokerUrl = "tcp://mqtt_url:11883";
         System.out.println(" MqttClient  client = new MqttClient(new DefaultProfile(brokerUrl, productKey, deviceKey, secretKey)");
         MqttClient  client = new MqttClient(new DefaultProfile(brokerUrl, productKey, deviceKey, secretKey));
 

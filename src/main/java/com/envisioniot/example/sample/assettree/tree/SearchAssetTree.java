@@ -35,7 +35,7 @@ public class SearchAssetTree {
         String expression_tag_exists =  "exists(tags.EnosCDS)";
         searchAssetTreewithExpression(accessKey, secretKey, orgId, url, expression_tag_exists);*/
 
-        String expression_treeId =  "treeId = 'y4wNuWEp' ";
+        String expression_treeId =  "treeId = 'TreeId' ";
         searchAssetTreewithExpression(accessKey, secretKey, orgId, url, expression_treeId);
 
         String expression_name_default =  "name.default = 'Lightsource_bp'";

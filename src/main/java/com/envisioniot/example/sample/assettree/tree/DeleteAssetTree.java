@@ -27,7 +27,7 @@ public class DeleteAssetTree {
     public void deleteAssetTree(String accessKey, String secretKey, String orgId, String url) {
         DeleteTreeRequest request = new DeleteTreeRequest();
         request.setOrgId(orgId);
-        request.setTreeId("U22GDyrC");
+        request.setTreeId("TreeId");
         DeleteTreeResponse response = Poseidon.config(PConfig.init().appKey(accessKey).appSecret(secretKey).debug())
                 .url(url)
                 .getResponse(request, DeleteTreeResponse.class);

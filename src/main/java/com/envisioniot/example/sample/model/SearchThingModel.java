@@ -148,7 +148,7 @@ public class SearchThingModel {
     public void searchmodel_tag_pagination(String accessKey, String secretKey, String orgId, String url) {
         SearchThingModelRequest request = new SearchThingModelRequest();
         request.setOrgId(orgId);
-        request.setExpression("tags.amc_solar_o15952073792221_product = \"tA4ZSAFR\" ");
+        request.setExpression("tags.amc_solar_o15952073792221_product = \"tag1\" ");
         Projection projection = new Projection();
         projection.add("modelId");
         projection.add("name");

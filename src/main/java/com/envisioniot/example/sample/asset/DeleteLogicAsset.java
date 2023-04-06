@@ -26,7 +26,7 @@ public class DeleteLogicAsset {
     public void deleteAsset(String accessKey, String secretKey, String orgId, String url) {
         DeleteLogicAssetRequest request = new DeleteLogicAssetRequest();
         request.setOrgId(orgId);
-        request.setAssetId("HICxXfLq"); //The logic asset ID to be deleted. Using a device asset ID will fail.
+        request.setAssetId("assetId"); //The logic asset ID to be deleted. Using a device asset ID will fail.
         DeleteLogicAssetResponse response = Poseidon.config(PConfig.init().appKey(accessKey).appSecret(secretKey).debug())
                 .url(url).getResponse(request, DeleteLogicAssetResponse.class);
     }

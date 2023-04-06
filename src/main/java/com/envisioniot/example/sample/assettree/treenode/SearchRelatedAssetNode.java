@@ -33,22 +33,22 @@ public class SearchRelatedAssetNode {
     public void searchRelatedAssetNodeAll(String accessKey, String secretKey, String orgId, String url) {
 
         RelatedAssetSearchVo filter1 = new RelatedAssetSearchVo();
-        filter1.setIsChildOfAssetId("ChahG3d9");
+        filter1.setIsChildOfAssetId("assetId");
         searchRelatedAssetNodeUnderChild(accessKey, secretKey, orgId, url, filter1);
 
         RelatedAssetSearchVo filter2 = new RelatedAssetSearchVo();
-        filter2.setIsParentOfAssetId("L48RzYEF");
+        filter2.setIsParentOfAssetId("assetId");
         searchRelatedAssetNodeUnderChild(accessKey, secretKey, orgId, url, filter2);
 
         RelatedAssetSearchVo filter3 = new RelatedAssetSearchVo();
-        filter3.setIsAncestorOfAssetId("L48RzYEF");
+        filter3.setIsAncestorOfAssetId("assetId");
         searchRelatedAssetNodeUnderChild(accessKey, secretKey, orgId, url, filter3);
 
         RelatedAssetSearchVo filter4 = new RelatedAssetSearchVo();
-        filter4.setIsDescendantOfAssetId("gHSYigXY");
+        filter4.setIsDescendantOfAssetId("assetId");
         searchRelatedAssetNodeUnderChild(accessKey, secretKey, orgId, url, filter4);
         RelatedAssetSearchVo filter5 = new RelatedAssetSearchVo();
-        filter5.setAssetIds(Arrays.asList("gHSYigXY", "QLhgPFGc", "wdLa8m9d"));
+        filter5.setAssetIds(Arrays.asList("assetId1", "assetId2", "assetId3"));
         searchRelatedAssetNodeUnderChild(accessKey, secretKey, orgId, url, filter5);
 
         RelatedAssetSearchVo filter6 = new RelatedAssetSearchVo();
@@ -76,7 +76,7 @@ public class SearchRelatedAssetNode {
     public void searchRelatedAssetNodeUnderChild(String accessKey, String secretKey, String orgId, String url, RelatedAssetSearchVo filter) {
         SearchRelatedAssetNodeRequest request = new SearchRelatedAssetNodeRequest();
         request.setOrgId(orgId);
-        request.setTreeId("U22GDyrC");
+        request.setTreeId("treeId1");
         request.setFilter(filter);
         Projection projection = new Projection();
         //projection.addAll(Arrays.asList("attributes", "assetId", "name"));

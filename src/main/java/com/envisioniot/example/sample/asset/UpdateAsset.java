@@ -33,7 +33,7 @@ public class UpdateAsset {
         UpdateAssetRequest request = new UpdateAssetRequest();
         request.setOrgId(orgId);
         AssetUpdateVo asset = new AssetUpdateVo();
-        asset.setAssetId("QogFxiEg");
+        asset.setAssetId("assetId");
 
         Map<String, Object> newAttrs = new HashMap<>();
         newAttrs.put("altitude",123.45);
@@ -65,7 +65,7 @@ public class UpdateAsset {
         UpdateAssetRequest request = new UpdateAssetRequest();
         request.setOrgId(orgId);
         AssetUpdateVo asset = new AssetUpdateVo();
-        asset.setAssetId("QogFxiEg");
+        asset.setAssetId("AssetId");
 
         Map<String, Object> newAttrs = new HashMap<>();
         newAttrs.put("altitude",123.45);

@@ -90,8 +90,8 @@ public class SearchEvent {
             String url)
     {
         // Setting the expression
-        String exp_equalsTo = "productKey = \"98683knm\" AND deviceKey = \"rGhMZ6daqj\"";
-        String exp_in = "productKey in (\"98683knm\") AND deviceKey in (\"rGhMZ6daqj\")";
+        String exp_equalsTo = "productKey = \"pk1\" AND deviceKey = \"dk1\"";
+        String exp_in = "productKey in (\"pk1\") AND deviceKey in (\"dk1\")";
 
         // Use assetId to identify device (whose commands will be searched through)
         searchBy(accessKey, secretKey, orgId, url, exp_equalsTo);
@@ -106,8 +106,8 @@ public class SearchEvent {
             String url)
     {
         // Setting the expression
-        String exp_equalsTo = "assetId = \"szxpLiGi\"";
-        String exp_in = "assetId in (\"szxpLiGi\")";
+        String exp_equalsTo = "assetId = \"assetId1\"";
+        String exp_in = "assetId in (\"assetId1\")";
 
         // Use assetId to identify device (whose commands will be searched through)
         searchBy(accessKey, secretKey, orgId, url, exp_equalsTo);

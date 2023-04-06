@@ -31,7 +31,7 @@ import java.util.Map;
 public class UpdateAssetTree {
     public void updateAssetTree(String accessKey, String secretKey, String orgId, String url) {
         TreeUpdateVo treeUpdateVo = new TreeUpdateVo();
-        treeUpdateVo.setTreeId("U22GDyrC");
+        treeUpdateVo.setTreeId("TreeId");
         UpdateTreeRequest request = new UpdateTreeRequest ();
         Map< String, String > i18nValue = new HashMap();
         i18nValue.put("zh_CN", "assetName1");

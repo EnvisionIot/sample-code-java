@@ -27,9 +27,9 @@ public class AssociateTree {
     public void associateTree(String accessKey, String secretKey, String orgId, String url) {
         AssociateAssetNodeRequest request = new AssociateAssetNodeRequest();
         request.setOrgId(orgId);
-        request.setTreeId("U22GDyrC");
-        request.setParentAssetId("ChahG3d9");
-        request.setAssetId("hfuU7D1H");
+        request.setTreeId("treeId");
+        request.setParentAssetId("assetId");
+        request.setAssetId("assetId");
         CreateTreeResponse response = Poseidon.config(PConfig.init().appKey(accessKey).appSecret(secretKey).debug())
                 .url(url)
                 .getResponse(request, CreateTreeResponse.class);
@@ -37,10 +37,10 @@ public class AssociateTree {
     public void associateTreewithProductDevicekey(String accessKey, String secretKey, String orgId, String url) {
         AssociateAssetNodeRequest request = new AssociateAssetNodeRequest();
         request.setOrgId(orgId);
-        request.setTreeId("U22GDyrC");
-        request.setParentAssetId("ChahG3d9");
-        request.setProductKey("tR1PKmQH");
-        request.setDeviceKey("SmpDxF6WHW");
+        request.setTreeId("treeId");
+        request.setParentAssetId("assetId");
+        request.setProductKey("pk");
+        request.setDeviceKey("dk");
         CreateTreeResponse response = Poseidon.config(PConfig.init().appKey(accessKey).appSecret(secretKey).debug())
                 .url(url)
                 .getResponse(request, CreateTreeResponse.class);

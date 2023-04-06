@@ -13,10 +13,10 @@ public class MoveAssetNode {
     public void moveAssetNode(String accessKey, String secretKey, String orgId, String url) {
         MoveAssetNodeRequest request = new MoveAssetNodeRequest();
         request.setOrgId(orgId);
-        request.setTreeId("U22GDyrC"); // input treeId
-        request.setParentAssetId("ChahG3d9"); // input parent asset id
-        request.setPreAssetId("sdfasdd"); // input pre asset id
-        request.setAssetId("hfuU7D1H"); // input asset id
+        request.setTreeId("treeId"); // input treeId
+        request.setParentAssetId("assetId"); // input parent asset id
+        request.setPreAssetId("assetId"); // input pre asset id
+        request.setAssetId("assetId"); // input asset id
         MoveAssetNodeResponse response = Poseidon.config(PConfig.init().appKey(accessKey).appSecret(secretKey).debug())
                 .url(url)
                 .getResponse(request, MoveAssetNodeResponse.class);

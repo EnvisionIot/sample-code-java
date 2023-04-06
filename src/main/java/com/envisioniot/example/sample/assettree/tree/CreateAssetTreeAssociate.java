@@ -35,7 +35,7 @@ public class CreateAssetTreeAssociate {
         treeName.setDefaultValue("NewTree");
         tree.setName(treeName);
         request.setTree(tree);
-        request.setAssetId("4TRNZKao");
+        request.setAssetId("AssetId");
         request.setOrgId(orgId);
 
         AssociateTreeResponse response = Poseidon.config(PConfig.init().appKey(accessKey).appSecret(secretKey).debug())
@@ -52,8 +52,8 @@ public class CreateAssetTreeAssociate {
         treeName.setDefaultValue("NewTree");
         tree.setName(treeName);
         request.setTree(tree);
-        request.setProductKey("Ihqkw5mx");
-        request.setDeviceKey("oUQVWhAkou");
+        request.setProductKey("PK");
+        request.setDeviceKey("DK");
         request.setOrgId(orgId);
 
         AssociateTreeResponse response = Poseidon.config(PConfig.init().appKey(accessKey).appSecret(secretKey).debug())

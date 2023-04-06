@@ -31,13 +31,13 @@ public class SearchAssetNode {
     // for logic Assets
     public void searchAssetNodeAll(String accessKey, String secretKey, String orgId, String url) {
 
-        String expression_assetId = "assetId = 'L48RzYEF'";
+        String expression_assetId = "assetId = 'assetId'";
         searchAssetNode(accessKey, secretKey, orgId, url, expression_assetId);
 
-        String expression_assetIdor = "assetId = 'L48RzYEF' or  assetId = 'hfuU7D1H'";
+        String expression_assetIdor = "assetId = 'assetId' or  assetId = 'assetId'";
         searchAssetNode(accessKey, secretKey, orgId, url, expression_assetIdor);
 
-        String expression_assetIdsin = "assetIds in ('L48RzYEF', 'hfuU7D1H')";
+        String expression_assetIdsin = "assetIds in ('assetId', 'assetId')";
         searchAssetNode(accessKey, secretKey, orgId, url, expression_assetIdsin);
 
         String expression_rootModelId = "rootModelId =  'EnOS_CITY_BUILDING'";
@@ -51,16 +51,16 @@ public class SearchAssetNode {
 
         String expression_ModelIds = "modelIds in  ('EnOS_CITY_BUILDING', 'EnOS_Edge_Standard_Model')";
         searchAssetNode(accessKey, secretKey, orgId, url, expression_ModelIds);
-        String expression_treeId = "treeId = 'U22GDyrC'";
+        String expression_treeId = "treeId = 'treeId'";
         searchAssetNode(accessKey, secretKey, orgId, url, expression_treeId);
 
-        String expression_treeIdand = "treeId = 'U22GDyrC' and modelId = 'EnOS_CITY_BUILDING'";
+        String expression_treeIdand = "treeId = 'treeId' and modelId = 'EnOS_CITY_BUILDING'";
         searchAssetNode(accessKey, secretKey, orgId, url, expression_treeIdand);
 
-        String expression_deviceProduct = "deviceKey = 'oUQVWhAkou' and productKey = 'Ihqkw5mx'";
+        String expression_deviceProduct = "deviceKey = 'dk' and productKey = 'pk'";
         searchAssetNode(accessKey, secretKey, orgId, url, expression_deviceProduct);
 
-        String expression_deviceProduct_like = "deviceKey like 'oUQVWh' and productKey like 'Ihq'";
+        String expression_deviceProduct_like = "deviceKey like 'dk' and productKey like 'pk'";
         searchAssetNode(accessKey, secretKey, orgId, url, expression_deviceProduct_like);
 
         String expression_tags = "tags.key1  = 'value1'";

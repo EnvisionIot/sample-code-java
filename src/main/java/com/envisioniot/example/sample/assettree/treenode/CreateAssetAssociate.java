@@ -35,8 +35,8 @@ public class CreateAssetAssociate {
 
         CreateAssetNodeRequest request = new CreateAssetNodeRequest();
         request.setOrgId(orgId);
-        request.setTreeId("U22GDyrC");
-        request.setParentAssetId("ChahG3d9");
+        request.setTreeId("treeId");
+        request.setParentAssetId("assetId");
 
         Map< String, String > i18nValue = new HashMap();
         i18nValue.put("zh_CN", "assetName");

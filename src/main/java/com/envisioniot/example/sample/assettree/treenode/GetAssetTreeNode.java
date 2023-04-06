@@ -31,7 +31,7 @@ public class GetAssetTreeNode {
     public void searchAssetTreeByAssetIds(String accessKey, String secretKey, String orgId, String url) {
         SearchAssetTreeByAssetIdsRequest request = new SearchAssetTreeByAssetIdsRequest();
         request.setOrgId(orgId);
-        request.setAssetIds(Arrays.asList("L48RzYEF", "QogFxiEg"));
+        request.setAssetIds(Arrays.asList("assetId1", "assetId2"));
         // Optional
         Projection projection = new Projection();
         //projection.addAll(Arrays.asList("attributes", "assetId", "name"));

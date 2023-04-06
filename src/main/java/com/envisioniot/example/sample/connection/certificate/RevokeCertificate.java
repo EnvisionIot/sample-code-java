@@ -7,9 +7,9 @@ import com.envisioniot.enos.connect_service.v2_1.cert.*;
 public class RevokeCertificate {
 
     public void revokeCertificate(String accessKey, String secretKey, String orgId, String url) {
-        String yourProductKey = "qvO9qxEV";
-        String yourDeviceKey = "KoLX5HGobx";
-        String yourAssetId = "LbOOKFet";
+        String yourProductKey = "pk";
+        String yourDeviceKey = "dk";
+        String yourAssetId = "assetId";
 
         // data from the response of create/update certificate.
         Integer certSn = 54145;

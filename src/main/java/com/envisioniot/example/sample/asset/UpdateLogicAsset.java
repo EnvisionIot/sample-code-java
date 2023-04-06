@@ -33,7 +33,7 @@ public class UpdateLogicAsset {
         UpdateLogicAssetRequest request = new UpdateLogicAssetRequest();
         request.setOrgId(orgId);
         AssetUpdateVo asset = new AssetUpdateVo();
-        asset.setAssetId("p8ggvWmY");
+        asset.setAssetId("AssetId");
 
         Map<String, Object> newAttrs = new HashMap<>();
         newAttrs.put("latitude",123.45);

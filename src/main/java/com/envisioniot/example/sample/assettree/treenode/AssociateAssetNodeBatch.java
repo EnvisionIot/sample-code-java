@@ -15,9 +15,9 @@ public class AssociateAssetNodeBatch {
     public void associateAssetNodeBatch(String accessKey, String secretKey, String orgId, String url) {
         AssociateAssetNodeBatchRequest request = new AssociateAssetNodeBatchRequest();
         request.setOrgId(orgId);
-        request.setTreeId("U22GDyrC"); // input treeId
-        request.setParentAssetId("ChahG3d9"); // input parent assetId
-        request.setAssetIdentifiers(Lists.newArrayList(new AssetIdentifierVo("hfuU7D1H")));
+        request.setTreeId("TreeId"); // input treeId
+        request.setParentAssetId("AssetId"); // input parent assetId
+        request.setAssetIdentifiers(Lists.newArrayList(new AssetIdentifierVo("AssetId")));
         AssociateAssetNodeBatchResponse response = Poseidon.config(PConfig.init().appKey(accessKey).appSecret(secretKey).debug())
                 .url(url)
                 .getResponse(request, AssociateAssetNodeBatchResponse.class);

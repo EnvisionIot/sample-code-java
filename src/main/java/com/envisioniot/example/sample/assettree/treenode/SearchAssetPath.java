@@ -34,15 +34,15 @@ public class SearchAssetPath {
     public void searchAssetPathAll(String accessKey, String secretKey, String orgId, String url) {
 
         AssetTreePathSearchEndVo from = new AssetTreePathSearchEndVo();
-        from.setAssetIds(Arrays.asList("Ewp17ypI","wdLa8m9d"));
+        from.setAssetIds(Arrays.asList("assetId1","assetId1"));
         AssetTreePathSearchEndVo to = new AssetTreePathSearchEndVo();
         to.setRootModelIds(Arrays.asList("DataDiode_Model","LSBP_SolarSite"));
         searchAssetPath(accessKey, secretKey, orgId, url, from, to);
 
         AssetTreePathSearchEndVo from2 = new AssetTreePathSearchEndVo();
-        from2.setAssetIds(Arrays.asList("wdLa8m9d"));
+        from2.setAssetIds(Arrays.asList("assetId1"));
         AssetTreePathSearchEndVo to2 = new AssetTreePathSearchEndVo();
-        to2.setAssetIds(Arrays.asList("oy7QrZXl"));
+        to2.setAssetIds(Arrays.asList("assetId1"));
         searchAssetPath(accessKey, secretKey, orgId, url, from2, to2);
 
         AssetTreePathSearchEndVo from3 = new AssetTreePathSearchEndVo();
@@ -67,14 +67,14 @@ public class SearchAssetPath {
         AssetTreePathSearchEndVo from6 = new AssetTreePathSearchEndVo();
         from6.setModelIds(Arrays.asList("EnOS_CITY_BUILDING"));
         AssetTreePathSearchEndVo to6 = new AssetTreePathSearchEndVo();
-        to6.setAssetIds(Arrays.asList("kt2x05jd", "BQ4hUvhc"));
+        to6.setAssetIds(Arrays.asList("assetId1", "assetId1"));
         searchAssetPath(accessKey, secretKey, orgId, url, from6, to6);
 
     }
     public void searchAssetPath(String accessKey, String secretKey, String orgId, String url, AssetTreePathSearchEndVo from, AssetTreePathSearchEndVo to) {
         SearchAssetPathRequest request = new SearchAssetPathRequest();
         request.setOrgId(orgId);
-        request.setTreeId("U22GDyrC");
+        request.setTreeId("treeId1");
         request.setFrom(from);
         request.setTo(to);
         Projection projection = new Projection();
