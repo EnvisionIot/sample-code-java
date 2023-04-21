@@ -1,0 +1,714 @@
+{
+  "thingModelId": "demo_lift_model",
+  "ou": "o15520323695671",
+  "thingModelName": {
+    "defaultValue": "demo_lift_model",
+    "i18nValue": {}
+  },
+  "thingModelDesc": "",
+  "thingModelCatagory": "",
+  "thingAttributeMap": {
+    "longitude": {
+      "minimum": -3.4028235E38,
+      "maximum": 3.4028235E38,
+      "exclusiveMinimum": false,
+      "exclusiveMaximum": false,
+      "defaultValue": 103.845,
+      "hasQuality": false,
+      "required": false,
+      "accessMode": true,
+      "identifier": "longitude",
+      "name": {
+        "defaultValue": "Longitude",
+        "i18nValue": {
+          "en_US": "",
+          "zh_CN": "",
+          "es_ES": "",
+          "ja_JP": ""
+        }
+      },
+      "desc": "",
+      "i18nDesc": {
+        "defaultValue": "",
+        "i18nValue": {
+          "en_US": "",
+          "zh_CN": "",
+          "es_ES": "",
+          "ja_JP": ""
+        }
+      },
+      "tags": {
+        "tagMap": {
+          "location": "singapore"
+        }
+      },
+      "createTime": "1638329070510",
+      "priority": 1,
+      "$class": "com.envisioniot.enos.model_service.share.data.tsl.attribute.TSLFloatAttribute"
+    },
+    "latitude": {
+      "minimum": -3.4028235E38,
+      "maximum": 3.4028235E38,
+      "exclusiveMinimum": false,
+      "exclusiveMaximum": false,
+      "defaultValue": 1.328,
+      "hasQuality": false,
+      "required": false,
+      "accessMode": true,
+      "identifier": "latitude",
+      "name": {
+        "defaultValue": "Latitude",
+        "i18nValue": {
+          "en_US": "",
+          "zh_CN": "",
+          "es_ES": "",
+          "ja_JP": ""
+        }
+      },
+      "desc": "",
+      "i18nDesc": {
+        "defaultValue": "",
+        "i18nValue": {
+          "en_US": "",
+          "zh_CN": "",
+          "es_ES": "",
+          "ja_JP": ""
+        }
+      },
+      "tags": {
+        "tagMap": {}
+      },
+      "createTime": "1638329070510",
+      "priority": 2,
+      "$class": "com.envisioniot.enos.model_service.share.data.tsl.attribute.TSLFloatAttribute"
+    },
+    "building": {
+      "maxLength": 100,
+      "required": false,
+      "accessMode": true,
+      "identifier": "building",
+      "name": {
+        "defaultValue": "building",
+        "i18nValue": {
+          "en_US": "",
+          "zh_CN": "",
+          "es_ES": "",
+          "ja_JP": ""
+        }
+      },
+      "desc": "",
+      "i18nDesc": {
+        "defaultValue": "",
+        "i18nValue": {
+          "en_US": "",
+          "zh_CN": "",
+          "es_ES": "",
+          "ja_JP": ""
+        }
+      },
+      "tags": {
+        "tagMap": {}
+      },
+      "createTime": "1638329070510",
+      "priority": 4,
+      "$class": "com.envisioniot.enos.model_service.share.data.tsl.attribute.TSLTextAttribute"
+    }
+  },
+  "thingMeasurepointMap": {
+    "temp": {
+      "minimum": -1.7976931348623157E308,
+      "maximum": 1.7976931348623157E308,
+      "exclusiveMinimum": false,
+      "exclusiveMaximum": false,
+      "unit": {
+        "unitId": "°C",
+        "multiplier": "ONE"
+      },
+      "signalType": "AI",
+      "hasQuality": false,
+      "required": false,
+      "accessMode": true,
+      "identifier": "temp",
+      "name": {
+        "defaultValue": "temp",
+        "i18nValue": {
+          "en_US": "",
+          "zh_CN": "",
+          "es_ES": "",
+          "ja_JP": ""
+        }
+      },
+      "desc": "",
+      "i18nDesc": {
+        "defaultValue": "",
+        "i18nValue": {
+          "en_US": "",
+          "zh_CN": "",
+          "es_ES": "",
+          "ja_JP": ""
+        }
+      },
+      "tags": {
+        "tagMap": {}
+      },
+      "createTime": "1638329070547",
+      "priority": 11,
+      "$class": "com.envisioniot.enos.model_service.share.data.tsl.measurepoint.TSLDoubleMeasurepoint"
+    },
+    "humidity": {
+      "minimum": -1.7976931348623157E308,
+      "maximum": 1.7976931348623157E308,
+      "exclusiveMinimum": false,
+      "exclusiveMaximum": false,
+      "unit": {
+        "unitId": "%",
+        "multiplier": "ONE"
+      },
+      "signalType": "AI",
+      "hasQuality": false,
+      "required": false,
+      "accessMode": true,
+      "identifier": "humidity",
+      "name": {
+        "defaultValue": "humidity",
+        "i18nValue": {
+          "en_US": "",
+          "zh_CN": "",
+          "es_ES": "",
+          "ja_JP": ""
+        }
+      },
+      "desc": "",
+      "i18nDesc": {
+        "defaultValue": "",
+        "i18nValue": {
+          "en_US": "",
+          "zh_CN": "",
+          "es_ES": "",
+          "ja_JP": ""
+        }
+      },
+      "tags": {
+        "tagMap": {}
+      },
+      "createTime": "1638329070547",
+      "priority": 16,
+      "$class": "com.envisioniot.enos.model_service.share.data.tsl.measurepoint.TSLDoubleMeasurepoint"
+    },
+    "accelerometer_yaw": {
+      "minimum": -1.7976931348623157E308,
+      "maximum": 1.7976931348623157E308,
+      "exclusiveMinimum": false,
+      "exclusiveMaximum": false,
+      "unit": {
+        "unitId": "°",
+        "multiplier": "ONE"
+      },
+      "signalType": "AI",
+      "hasQuality": false,
+      "required": false,
+      "accessMode": true,
+      "identifier": "accelerometer_yaw",
+      "name": {
+        "defaultValue": "accelerometer_yaw",
+        "i18nValue": {
+          "en_US": "",
+          "zh_CN": "",
+          "es_ES": "",
+          "ja_JP": ""
+        }
+      },
+      "desc": "",
+      "i18nDesc": {
+        "defaultValue": "",
+        "i18nValue": {
+          "en_US": "",
+          "zh_CN": "",
+          "es_ES": "",
+          "ja_JP": ""
+        }
+      },
+      "tags": {
+        "tagMap": {}
+      },
+      "createTime": "1638329070547",
+      "priority": 17,
+      "$class": "com.envisioniot.enos.model_service.share.data.tsl.measurepoint.TSLDoubleMeasurepoint"
+    },
+    "accelerometer_roll": {
+      "minimum": -1.7976931348623157E308,
+      "maximum": 1.7976931348623157E308,
+      "exclusiveMinimum": false,
+      "exclusiveMaximum": false,
+      "unit": {
+        "unitId": "°",
+        "multiplier": "ONE"
+      },
+      "signalType": "AI",
+      "hasQuality": false,
+      "required": false,
+      "accessMode": true,
+      "identifier": "accelerometer_roll",
+      "name": {
+        "defaultValue": "accelerometer_roll",
+        "i18nValue": {
+          "en_US": "",
+          "zh_CN": "",
+          "es_ES": "",
+          "ja_JP": ""
+        }
+      },
+      "desc": "",
+      "i18nDesc": {
+        "defaultValue": "",
+        "i18nValue": {
+          "en_US": "",
+          "zh_CN": "",
+          "es_ES": "",
+          "ja_JP": ""
+        }
+      },
+      "tags": {
+        "tagMap": {}
+      },
+      "createTime": "1638329070547",
+      "priority": 18,
+      "$class": "com.envisioniot.enos.model_service.share.data.tsl.measurepoint.TSLDoubleMeasurepoint"
+    },
+    "accelerometer_pitch": {
+      "minimum": -1.7976931348623157E308,
+      "maximum": 1.7976931348623157E308,
+      "exclusiveMinimum": false,
+      "exclusiveMaximum": false,
+      "unit": {
+        "unitId": "°",
+        "multiplier": "ONE"
+      },
+      "signalType": "AI",
+      "hasQuality": false,
+      "required": false,
+      "accessMode": true,
+      "identifier": "accelerometer_pitch",
+      "name": {
+        "defaultValue": "accelerometer_pitch",
+        "i18nValue": {
+          "en_US": "",
+          "zh_CN": "",
+          "es_ES": "",
+          "ja_JP": ""
+        }
+      },
+      "desc": "",
+      "i18nDesc": {
+        "defaultValue": "",
+        "i18nValue": {
+          "en_US": "",
+          "zh_CN": "",
+          "es_ES": "",
+          "ja_JP": ""
+        }
+      },
+      "tags": {
+        "tagMap": {}
+      },
+      "createTime": "1638329070547",
+      "priority": 19,
+      "$class": "com.envisioniot.enos.model_service.share.data.tsl.measurepoint.TSLDoubleMeasurepoint"
+    },
+    "floor_number": {
+      "maxLength": 4,
+      "required": false,
+      "accessMode": true,
+      "identifier": "floor_number",
+      "name": {
+        "defaultValue": "floor_number",
+        "i18nValue": {
+          "en_US": "",
+          "zh_CN": "",
+          "es_ES": "",
+          "ja_JP": ""
+        }
+      },
+      "desc": "",
+      "i18nDesc": {
+        "defaultValue": "",
+        "i18nValue": {
+          "en_US": "",
+          "zh_CN": "",
+          "es_ES": "",
+          "ja_JP": ""
+        }
+      },
+      "tags": {
+        "tagMap": {
+          "location": "floor"
+        }
+      },
+      "createTime": "1638329070547",
+      "priority": 20,
+      "$class": "com.envisioniot.enos.model_service.share.data.tsl.measurepoint.TSLTextMeasurepoint"
+    }
+  },
+  "thingServiceMap": {
+    "toggleAirconTemp": {
+      "outputData": [],
+      "inputData": [
+        {
+          "minimum": -3.4028235E38,
+          "maximum": 3.4028235E38,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "hasQuality": false,
+          "required": false,
+          "accessMode": true,
+          "identifier": "temp",
+          "name": {
+            "defaultValue": "temp",
+            "i18nValue": {}
+          },
+          "desc": "",
+          "i18nDesc": {
+            "i18nValue": {}
+          },
+          "tags": {
+            "tagMap": {}
+          },
+          "createTime": "1638784149696",
+          "priority": 0,
+          "$class": "com.envisioniot.enos.model_service.share.data.tsl.datapoint.TSLFloat"
+        }
+      ],
+      "required": false,
+      "callType": "ASYNC",
+      "identifier": "toggleAirconTemp",
+      "name": {
+        "defaultValue": "toggleAirconTemp",
+        "i18nValue": {
+          "en_US": "",
+          "zh_CN": "",
+          "es_ES": "",
+          "ja_JP": ""
+        }
+      },
+      "desc": "",
+      "i18nDesc": {
+        "defaultValue": "",
+        "i18nValue": {
+          "en_US": "",
+          "zh_CN": "",
+          "es_ES": "",
+          "ja_JP": ""
+        }
+      },
+      "tags": {
+        "tagMap": {
+          "function": "toogle"
+        }
+      },
+      "createTime": "1638329070579",
+      "priority": 1
+    },
+    "setAlertYaw": {
+      "outputData": [],
+      "inputData": [
+        {
+          "minimum": -2147483648,
+          "maximum": 2147483647,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "hasQuality": false,
+          "required": false,
+          "accessMode": true,
+          "identifier": "value",
+          "name": {
+            "defaultValue": "value",
+            "i18nValue": {}
+          },
+          "desc": "",
+          "i18nDesc": {
+            "i18nValue": {}
+          },
+          "tags": {
+            "tagMap": {}
+          },
+          "createTime": "1638329070579",
+          "priority": 0,
+          "$class": "com.envisioniot.enos.model_service.share.data.tsl.datapoint.TSLInt"
+        }
+      ],
+      "required": false,
+      "callType": "ASYNC",
+      "identifier": "setAlertYaw",
+      "name": {
+        "defaultValue": "setAlertYaw",
+        "i18nValue": {
+          "en_US": "",
+          "zh_CN": "",
+          "es_ES": "",
+          "ja_JP": ""
+        }
+      },
+      "desc": "",
+      "i18nDesc": {
+        "defaultValue": "",
+        "i18nValue": {
+          "en_US": "",
+          "zh_CN": "",
+          "es_ES": "",
+          "ja_JP": ""
+        }
+      },
+      "tags": {
+        "tagMap": {}
+      },
+      "createTime": "1638329070579",
+      "priority": 2
+    },
+    "setAlertRoll": {
+      "outputData": [],
+      "inputData": [
+        {
+          "minimum": -2147483648,
+          "maximum": 2147483647,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "hasQuality": false,
+          "required": false,
+          "accessMode": true,
+          "identifier": "value",
+          "name": {
+            "defaultValue": "value",
+            "i18nValue": {}
+          },
+          "desc": "",
+          "i18nDesc": {
+            "i18nValue": {}
+          },
+          "tags": {
+            "tagMap": {}
+          },
+          "createTime": "1638329070579",
+          "priority": 0,
+          "$class": "com.envisioniot.enos.model_service.share.data.tsl.datapoint.TSLInt"
+        }
+      ],
+      "required": false,
+      "callType": "ASYNC",
+      "identifier": "setAlertRoll",
+      "name": {
+        "defaultValue": "setAlertRoll",
+        "i18nValue": {
+          "en_US": "",
+          "zh_CN": "",
+          "es_ES": "",
+          "ja_JP": ""
+        }
+      },
+      "desc": "",
+      "i18nDesc": {
+        "defaultValue": "",
+        "i18nValue": {
+          "en_US": "",
+          "zh_CN": "",
+          "es_ES": "",
+          "ja_JP": ""
+        }
+      },
+      "tags": {
+        "tagMap": {}
+      },
+      "createTime": "1638329070579",
+      "priority": 3
+    },
+    "setAlertPitch": {
+      "outputData": [],
+      "inputData": [
+        {
+          "minimum": -2147483648,
+          "maximum": 2147483647,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "hasQuality": false,
+          "required": false,
+          "accessMode": true,
+          "identifier": "value",
+          "name": {
+            "defaultValue": "value",
+            "i18nValue": {}
+          },
+          "desc": "",
+          "i18nDesc": {
+            "i18nValue": {}
+          },
+          "tags": {
+            "tagMap": {}
+          },
+          "createTime": "1638329070579",
+          "priority": 0,
+          "$class": "com.envisioniot.enos.model_service.share.data.tsl.datapoint.TSLInt"
+        }
+      ],
+      "required": false,
+      "callType": "ASYNC",
+      "identifier": "setAlertPitch",
+      "name": {
+        "defaultValue": "setAlertPitch",
+        "i18nValue": {
+          "en_US": "",
+          "zh_CN": "",
+          "es_ES": "",
+          "ja_JP": ""
+        }
+      },
+      "desc": "",
+      "i18nDesc": {
+        "defaultValue": "",
+        "i18nValue": {
+          "en_US": "",
+          "zh_CN": "",
+          "es_ES": "",
+          "ja_JP": ""
+        }
+      },
+      "tags": {
+        "tagMap": {}
+      },
+      "createTime": "1638329070579",
+      "priority": 4
+    }
+  },
+  "thingEventMap": {
+    "tempExceed26": {
+      "outputData": [
+        {
+          "minimum": -3.4028235E38,
+          "maximum": 3.4028235E38,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "unit": {
+            "unitId": "°C",
+            "multiplier": "ONE"
+          },
+          "hasQuality": false,
+          "required": false,
+          "accessMode": true,
+          "identifier": "temp",
+          "name": {
+            "defaultValue": "temp",
+            "i18nValue": {}
+          },
+          "desc": "",
+          "i18nDesc": {
+            "i18nValue": {}
+          },
+          "tags": {
+            "tagMap": {}
+          },
+          "createTime": "1638784161517",
+          "priority": 0,
+          "$class": "com.envisioniot.enos.model_service.share.data.tsl.datapoint.TSLFloat"
+        }
+      ],
+      "type": "INFO",
+      "required": false,
+      "identifier": "tempExceed26",
+      "name": {
+        "defaultValue": "tempExceed26",
+        "i18nValue": {
+          "en_US": "",
+          "zh_CN": "",
+          "es_ES": "",
+          "ja_JP": ""
+        }
+      },
+      "desc": "",
+      "i18nDesc": {
+        "defaultValue": "",
+        "i18nValue": {
+          "en_US": "",
+          "zh_CN": "",
+          "es_ES": "",
+          "ja_JP": ""
+        }
+      },
+      "tags": {
+        "tagMap": {
+          "type": "temp"
+        }
+      },
+      "createTime": "1638329070640",
+      "priority": 1
+    },
+    "yawExceed100": {
+      "outputData": [
+        {
+          "minimum": -3.4028235E38,
+          "maximum": 3.4028235E38,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "hasQuality": false,
+          "required": false,
+          "accessMode": true,
+          "identifier": "yaw",
+          "name": {
+            "defaultValue": "yaw",
+            "i18nValue": {}
+          },
+          "desc": "",
+          "i18nDesc": {
+            "i18nValue": {}
+          },
+          "tags": {
+            "tagMap": {}
+          },
+          "createTime": "1638329070640",
+          "priority": 0,
+          "$class": "com.envisioniot.enos.model_service.share.data.tsl.datapoint.TSLFloat"
+        }
+      ],
+      "type": "INFO",
+      "required": false,
+      "identifier": "yawExceed100",
+      "name": {
+        "defaultValue": "yawExceed100",
+        "i18nValue": {
+          "en_US": "",
+          "zh_CN": "",
+          "es_ES": "",
+          "ja_JP": ""
+        }
+      },
+      "desc": "",
+      "i18nDesc": {
+        "defaultValue": "",
+        "i18nValue": {
+          "en_US": "",
+          "zh_CN": "",
+          "es_ES": "",
+          "ja_JP": ""
+        }
+      },
+      "tags": {
+        "tagMap": {}
+      },
+      "createTime": "1638329070640",
+      "priority": 2
+    }
+  },
+  "tag": {
+    "tagMap": {}
+  },
+  "allowAdditionalAttribute": false,
+  "allowAdditionalMeasurepoint": true,
+  "inheritedAttributeIds": [],
+  "inheritedMeasurepointIds": [],
+  "inheritedServiceIds": [],
+  "inheritedEventIds": [],
+  "extraInfo": {
+    "createBy": "xibin.song",
+    "createTime": "1638329043964",
+    "updateBy": "xibin.song",
+    "updateTime": "1638784163182",
+    "ns": "o15520323695671"
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "thingModelId": "demo_smartbattery_model_15",
+  "ou": "o15520323695671",
+  "thingModelName": {
+    "defaultValue": "demo_smartbattery_model_15",
+    "i18nValue": {}
+  },
+  "thingModelDesc": "",
+  "thingModelCatagory": "",
+  "thingAttributeMap": {
+    "brand": {
+      "maxLength": 64,
+      "required": false,
+      "accessMode": true,
+      "identifier": "brand",
+      "name": {
+        "defaultValue": "brand",
+        "i18nValue": {}
+      },
+      "desc": "Brand information of the device",
+      "i18nDesc": {
+        "defaultValue": "Brand information of the device",
+        "i18nValue": {}
+      },
+      "tags": {
+        "tagMap": {}
+      },
+      "createTime": "1640157277293",
+      "priority": 1,
+      "$class": "com.envisioniot.enos.model_service.share.data.tsl.attribute.TSLTextAttribute"
+    }
+  },
+  "thingMeasurepointMap": {
+    "temperature": {
+      "minimum": -1.7976931348623157E308,
+      "maximum": 1.7976931348623157E308,
+      "exclusiveMinimum": false,
+      "exclusiveMaximum": false,
+      "unit": {
+        "unitId": "°C",
+        "multiplier": "ONE"
+      },
+      "signalType": "AI",
+      "hasQuality": false,
+      "required": false,
+      "accessMode": true,
+      "identifier": "temperature",
+      "name": {
+        "defaultValue": "temperature",
+        "i18nValue": {}
+      },
+      "desc": "Point to ingest the device temperature",
+      "i18nDesc": {
+        "defaultValue": "Point to ingest the device temperature",
+        "i18nValue": {}
+      },
+      "tags": {
+        "tagMap": {}
+      },
+      "createTime": "1640157361542",
+      "priority": 1,
+      "$class": "com.envisioniot.enos.model_service.share.data.tsl.measurepoint.TSLDoubleMeasurepoint"
+    }
+  },
+  "thingServiceMap": {
+    "start_charging": {
+      "outputData": [],
+      "inputData": [],
+      "required": false,
+      "callType": "ASYNC",
+      "identifier": "start_charging",
+      "name": {
+        "defaultValue": "start_charging",
+        "i18nValue": {}
+      },
+      "desc": "Service that controls the charging status of the device",
+      "i18nDesc": {
+        "defaultValue": "Service that controls the charging status of the device",
+        "i18nValue": {}
+      },
+      "tags": {
+        "tagMap": {}
+      },
+      "createTime": "1640157510903",
+      "priority": 1
+    }
+  },
+  "thingEventMap": {},
+  "tag": {
+    "tagMap": {}
+  },
+  "allowAdditionalAttribute": false,
+  "allowAdditionalMeasurepoint": false,
+  "inheritedAttributeIds": [],
+  "inheritedMeasurepointIds": [],
+  "inheritedServiceIds": [],
+  "inheritedEventIds": [],
+  "copyFromId": "demo_smartbattery_model_9",
+  "extraInfo": {
+    "createBy": "arihant.jain",
+    "createTime": "1641285803280",
+    "updateBy": "arihant.jain",
+    "updateTime": "1641285803408",
+    "ns": "o15520323695671"
+  }
+}
